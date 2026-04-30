@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falhaus & ZYC — Strategic Partnership Brief · 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bl:#1e3a6f;--bl2:#2c4a85;--bl3:#3d5fa3;
+  --r:#c14a3b;--r2:#a13828;
+  --o:#7a8357;--ol:#9aa578;
+  --bg:#f5f1e8;--bg2:#ede7d7;
+  --w:#ffffff;--t:#2d2d2d;--tl:#5a5a5a;
+  --br:#d9cfbe;--brl:#e8e0cf;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--t);background:var(--bg);line-height:1.7;font-size:15.5px}
+.container{max-width:1080px;margin:0 auto;padding:0 44px}
+@media(max-width:760px){.container{padding:0 22px}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--bl) 0%,var(--bl2) 60%,var(--bl3) 100%);color:var(--w);padding:88px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-80px;right:-120px;width:480px;height:480px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--r),transparent 50%,var(--r) 100%)}
+.hero-inner{position:relative;z-index:2}
+.hero .eyebrow{display:inline-block;font-size:.66rem;letter-spacing:3.5px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:28px;padding:7px 18px;border:1px solid rgba(193,74,59,.55);border-radius:2px;background:rgba(193,74,59,.1)}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.9rem;font-weight:700;line-height:1.18;margin-bottom:18px;letter-spacing:-.3px;max-width:880px}
+.hero h1 em{font-style:italic;color:#f0d3cc;font-weight:600}
+.hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:1.18rem;font-weight:400;color:#e8d5ce;line-height:1.5;max-width:760px;margin-bottom:38px}
+.hero-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;margin-top:46px;padding-top:30px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-meta .item .lbl{font-size:.6rem;letter-spacing:2.2px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:6px}
+.hero-meta .item .val{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--w);font-weight:600;line-height:1.4}
+
+/* INTRO LETTER */
+.intro{background:var(--w);padding:54px 0 32px;border-bottom:1px solid var(--br)}
+.intro p{font-size:1rem;line-height:1.78;color:var(--t);margin-bottom:14px;max-width:800px}
+.intro p strong{color:var(--bl);font-weight:600}
+.signature{margin-top:20px;font-family:'Playfair Display',serif;color:var(--bl);font-size:1.05rem;font-weight:600}
+.signature .role{display:block;font-family:'Inter',sans-serif;font-size:.78rem;color:var(--tl);font-weight:500;margin-top:2px;letter-spacing:.5px}
+
+/* SECTION */
+section{padding:54px 0}
+section:nth-child(even){background:var(--w)}
+section + section{border-top:1px solid var(--br)}
+.section-tag{display:inline-flex;align-items:center;gap:10px;font-size:.66rem;letter-spacing:3px;text-transform:uppercase;color:var(--r);font-weight:700;margin-bottom:10px}
+.section-tag .num{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--bl);letter-spacing:0;font-weight:700;line-height:1}
+.section-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--bl);line-height:1.22;margin-bottom:14px;letter-spacing:-.2px;max-width:780px}
+.section-title em{font-style:italic;color:var(--bl3)}
+.section-intro{font-size:1.02rem;color:var(--tl);line-height:1.78;margin-bottom:26px;max-width:800px}
+p{font-size:.97rem;line-height:1.78;margin-bottom:14px;color:var(--t);max-width:800px}
+p strong{color:var(--bl);font-weight:600}
+
+/* HIGHLIGHT */
+.hlb{border-left:4px solid var(--r);background:linear-gradient(95deg,rgba(193,74,59,.07),rgba(193,74,59,.01));padding:18px 26px;border-radius:0 8px 8px 0;margin:22px 0;font-size:1rem;line-height:1.72;max-width:820px}
+.hlb strong{color:var(--bl);font-weight:600}
+.hlb.bl{border-left-color:var(--bl3);background:linear-gradient(95deg,rgba(61,95,163,.06),rgba(61,95,163,.01))}
+.hlb.ol{border-left-color:var(--o);background:linear-gradient(95deg,rgba(122,131,87,.07),rgba(122,131,87,.01))}
+
+/* STAT GRID — CRECIMIENTO */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin:24px 0 14px}
+.stat{background:var(--w);border:1px solid var(--br);border-top:4px solid var(--r);border-radius:6px;padding:24px 22px;position:relative}
+.stat .num{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:700;color:var(--bl);line-height:1;margin-bottom:6px;letter-spacing:-.5px}
+.stat .num small{font-size:1rem;color:var(--bl3);font-weight:600}
+.stat .lbl{font-size:.66rem;letter-spacing:1.8px;text-transform:uppercase;color:var(--r);font-weight:700;margin-bottom:6px}
+.stat .desc{font-size:.82rem;color:var(--tl);line-height:1.55}
+section:nth-child(even) .stat{background:var(--bg)}
+
+/* LIST */
+.lista{list-style:none;padding:0;margin:18px 0 6px;max-width:820px}
+.lista li{padding:12px 0 12px 32px;position:relative;border-bottom:1px dashed var(--br);font-size:.97rem;line-height:1.72;color:var(--t)}
+.lista li:last-child{border-bottom:none}
+.lista li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:2px;background:var(--r)}
+.lista li strong{color:var(--bl);font-weight:600;display:block;margin-bottom:2px}
+.lista li span{color:var(--tl);font-size:.9rem;line-height:1.62;display:block}
+
+/* TABLE */
+table{width:100%;max-width:880px;border-collapse:collapse;margin:22px 0;font-size:.92rem;background:var(--w);border:1px solid var(--br)}
+thead th{background:var(--bl);color:var(--w);text-align:left;padding:14px 18px;font-size:.7rem;letter-spacing:1.6px;text-transform:uppercase;font-weight:600}
+tbody td{padding:14px 18px;border-bottom:1px solid var(--brl);vertical-align:top;line-height:1.62}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--bg)}
+td strong{color:var(--bl);font-weight:600}
+
+/* TWO COL */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:22px 0;max-width:880px}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.split .col{background:var(--w);border:1px solid var(--br);border-top:3px solid var(--bl3);border-radius:6px;padding:22px 24px}
+section:nth-child(even) .split .col{background:var(--bg)}
+.split .col .cap{font-size:.6rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:8px;color:var(--r)}
+.split .col h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--bl);margin-bottom:10px;font-weight:700;line-height:1.3}
+.split .col p{font-size:.88rem;line-height:1.65;color:var(--t);margin:0}
+
+/* FOOTER */
+footer{background:var(--bl);color:#d8dff0;padding:60px 0 44px;text-align:center;position:relative}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--r),transparent)}
+footer .brand{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--w);font-weight:700;letter-spacing:1.5px;margin-bottom:6px}
+footer .tag{font-size:.66rem;letter-spacing:3px;color:#a5b1cc;text-transform:uppercase;margin-bottom:24px}
+footer .meta{font-size:.78rem;color:#a5b1cc;opacity:.8;margin-top:18px;line-height:1.7}
+
+/* PRINT */
+@media print{
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  section{page-break-inside:avoid;padding:34px 0}
+  .hlb,.stat,.split .col{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="eyebrow">Falhaus × ZYC · Strategic Partnership · April 2026</div>
+    <h1>Construyendo una <em>sociedad de largo plazo</em> entre Falhaus y ZYC</h1>
+    <p class="sub">Documento de posicionamiento estratégico para la videoconferencia ejecutiva con Mr. Gao y equipo. Síntesis del valor que Falhaus aporta como socio local en el mercado argentino y de las bases económicas y de gestión que necesitamos consolidar para escalar juntos en los próximos 12-24 meses.</p>
+    <div class="hero-meta">
+      <div class="item"><div class="lbl">Para</div><div class="val">Mr. Gao · Nancy · Lisa</div></div>
+      <div class="item"><div class="lbl">De</div><div class="val">Falhaus</div></div>
+      <div class="item"><div class="lbl">Fecha</div><div class="val">30 de abril de 2026</div></div>
+      <div class="item"><div class="lbl">Marco</div><div class="val">Videoconferencia ejecutiva</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO LETTER -->
+<section class="intro">
+  <div class="container">
+    <p>Estimados <strong>Mr. Gao, Nancy y Lisa</strong>,</p>
+    <p>Llegamos a esta conversación con una mirada clara y constructiva. La respuesta de Nancy a las cuestiones que les planteamos en abril fue profesional, honesta y orientada a soluciones; ese tipo de respuesta es la que nos confirma que ZYC es el socio que elegimos para acompañar el crecimiento de Falhaus en Argentina.</p>
+    <p>El propósito de este documento, y de la conversación que tendremos, no es repasar lo que ya quedó atrás. Es, justamente, <strong>poner en común cómo se gana el mercado argentino, qué aporta Falhaus como socio local en ese terreno, y qué bases económicas y de gestión necesitamos consolidar entre ambas empresas para que esta sociedad escale en condiciones sostenibles.</strong></p>
+    <p>Lo que sigue está organizado por ejes. Es una lectura de socios.</p>
+    <div class="signature">Federico Lami · Juan Pablo Lami · Facundo Gimenez<span class="role">Falhaus</span></div>
+  </div>
+</section>
+
+<!-- 01 · RECONOCIMIENTO -->
+<section>
+  <div class="container">
+    <div class="section-tag"><span class="num">01</span>Reconocimiento y celebración del camino</div>
+    <h2 class="section-title">El camino que <em>ZYC construyó</em>, y la sociedad que viene</h2>
+    <p class="section-intro">Antes de mirar hacia adelante, queremos detenernos. No en lo que pasó el último mes, sino en algo más grande: el camino completo que ZYC construyó para llegar a ser la empresa que es hoy. Esa trayectoria es la base sobre la que esta sociedad puede existir, y por eso queremos honrarla en el primer eje de este documento.</p>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:18px 0 12px;font-weight:700">Una palabra para Mr. Gao</h3>
+    <p>Mr. Gao, fundar y conducir ZYC durante todos estos años representa un logro que pocas personas alcanzan. Construir una fábrica capaz de exportar al mundo con la calidad y la escala que hoy ZYC tiene exige una mezcla rara: <strong>visión de largo plazo, disciplina diaria, conocimiento profundo del oficio, y la capacidad de cuidar a un equipo que crece junto con la empresa</strong>. Cada contenedor que sale de su planta lleva, además del producto, esos años de trabajo y esa manera de hacer las cosas. Reconocemos eso, y lo respetamos.</p>
+
+    <p>Sabemos también que recién regresó a China y que esta es una de sus primeras conversaciones después del viaje. Le agradecemos especialmente la disponibilidad para encontrarnos en este momento; entendemos que su tiempo es valioso y que el hecho de priorizar este encuentro habla del compromiso de ZYC con la relación.</p>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:30px 0 12px;font-weight:700">Lo que celebramos de la trayectoria de ZYC</h3>
+    <ul class="lista">
+      <li><strong>La capacidad industrial construida</strong><span>Una planta que opera con escala internacional, con líneas de producción propias, con un equipo que conoce el oficio. Esa capacidad no se improvisa: es el resultado de años de inversión, mejora continua y compromiso con la calidad.</span></li>
+      <li><strong>La forma en que se cuida al equipo</strong><span>Detrás de cada pedido que llega a Argentina hay personas que conocen su trabajo. Una empresa que mantiene a sus equipos, que los forma y los honra, es una empresa que sus socios quieren tener al lado.</span></li>
+      <li><strong>La voluntad de mejorar que vemos en la respuesta de Nancy</strong><span>La forma en que Nancy abordó nuestras observaciones técnicas, reconociendo los errores con claridad, ofreciendo soluciones concretas y proponiendo un nuevo sistema de doble inspección, es la actitud que diferencia a un proveedor de un verdadero socio. Esa actitud habla de la cultura interna de ZYC.</span></li>
+      <li><strong>La apertura a una sociedad de largo plazo</strong><span>Lo que Nancy nos transmitió en sus mensajes recientes, la disposición a tomar a Falhaus como socio central en Argentina, no es una respuesta táctica. Es la señal de una empresa que entiende el valor del crecimiento conjunto.</span></li>
+    </ul>
+
+    <div class="hlb"><strong>Tomamos esta etapa como una confirmación de la elección que hicimos al trabajar con ZYC.</strong> Y queremos que sepan que en Falhaus elegimos socios con la misma vara con la que ustedes construyeron su empresa: pensando en años, no en transacciones. El propósito de esta reunión no es repasar el pasado, sino construir desde lo que valoramos profundamente en el recorrido que ZYC ya hizo.</div>
+  </div>
+</section>
+
+<!-- 02 · CALIDAD Y CONFIANZA -->
+<section>
+  <div class="container">
+    <div class="section-tag"><span class="num">02</span>Calidad y confianza</div>
+    <h2 class="section-title">El sistema de doble inspección como <em>nueva línea de base</em></h2>
+    <p class="section-intro">Las observaciones técnicas que les enviamos no son el centro de esta conversación, pero sí lo es el sistema que ZYC propuso para evitarlas en adelante. Sobre ese sistema queremos construir.</p>
+
+    <p>Antes de avanzar, queremos reconocer algo importante: <strong>la solidez industrial que ZYC construyó a lo largo de los años es la base sobre la que esta sociedad puede existir</strong>. Sabemos que detrás de cada contenedor que llega a Argentina hay una fábrica con capacidad real, con know-how acumulado, con un equipo que conoce el oficio. Mr. Gao, ese trabajo de años es lo que valoramos cuando los elegimos como socios, y lo que confiamos seguir construyendo juntos.</p>
+
+    <p>Las cuestiones puntuales que aparecieron (el plano de pilotes, la diferencia entre eléctrica monofásica y trifásica, la incompatibilidad entre lana de roca y revestimiento interior, y la calidad del módulo plegable que comercializamos como Falhaus Refugio) ya tienen un camino de resolución acordado con Nancy. <strong>No las traemos a la mesa para reabrirlas.</strong> Las traemos para confirmar el valor del nuevo protocolo que ZYC propuso:</p>
+
+    <ul class="lista">
+      <li><strong>Doble inspección antes del embarque</strong><span>Confirmación técnica escrita previa con el equipo de Falhaus sobre configuración, accesorios, requisitos técnicos y personalizaciones especiales de cada pedido.</span></li>
+      <li><strong>Inspección 100% del producto terminado</strong><span>Material, apariencia, sistema eléctrico, accesorios y detalles personalizados, antes de cargar el contenedor.</span></li>
+    </ul>
+
+    <div class="hlb ol"><strong>Reconocimiento al gesto de Nancy.</strong> Recibimos con mucha valoración el ofrecimiento de ZYC de enviar sin cargo su mejor módulo como gesto de buena voluntad. Eso es justamente la actitud de socio que estábamos esperando, y confirma la cultura interna de la empresa. <br><br>En continuidad con ese mismo espíritu de colaboración, queremos abrir una consulta a la fábrica. En Falhaus contamos con espacio disponible en nuestro showroom para sumar una unidad y exhibirla de forma permanente, y nos gustaría consultarles si <strong>existe la posibilidad de que ZYC nos envíe, también sin cargo, un módulo Apple de 20 pies para ese showroom</strong>. Falhaus asumiría los costos de nacionalización en Argentina —del orden de USD 8.000— y toda la operación local de instalación. La idea es que ese módulo opere como vidriera permanente del producto en el mercado argentino, abierta a clientes finales, desarrolladores y prensa, y que de esa manera contribuya a fomentar la venta del modelo en el país. Es una inversión compartida en visibilidad de marca de ZYC en Argentina.</div>
+
+    <div class="hlb bl"><strong>Una propuesta concreta:</strong> que el protocolo de doble inspección y la confirmación técnica previa con el equipo de Falhaus queden formalizados como práctica permanente de la relación Falhaus–ZYC, no como respuesta a un caso particular. Eso es lo que protege a ambas empresas a largo plazo.</div>
+  </div>
+</section>
+
+<!-- 03 · EL VALOR LOCAL -->
+<section>
+  <div class="container">
+    <div class="section-tag"><span class="num">03</span>El valor que aportamos</div>
+    <h2 class="section-title">Argentina se gana con <em>voz local</em> y confianza</h2>
+    <p class="section-intro">Sabemos que ZYC opera a una escala industrial muchas veces mayor a la nuestra. No competimos en magnitud, somos diferentes en eso. Pero ofrecemos algo que ZYC no puede construir desde la distancia, y que en Argentina vale más que el tamaño: <strong>presencia local, marca propia y traducción cultural en un mercado que se compra a la cara conocida</strong>.</p>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:18px 0 12px;font-weight:700">Por qué la confianza pesa más que el precio</h3>
+    <p>El comprador argentino, ya sea un cliente final, un desarrollador, un revendedor o un funcionario provincial, compra a quien conoce. Decide tras hablar con alguien, después de ver el producto en una instalación cercana, después de leer comentarios en español, después de sentir respaldo de una marca local que se hace responsable. La empresa que <strong>pone la cara, que responde en idioma, que conoce el código cultural</strong> es la que vende. La que opera a distancia, no.</p>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:30px 0 12px;font-weight:700">Por qué el comprador argentino necesita una voz local</h3>
+    <p>En Argentina, el comprador final tiene preguntas naturales cuando se enfrenta a un producto importado: quién responde después de la entrega, dónde puede verlo en persona antes de decidir, cómo se garantiza la posventa, quién pone la cara si algo necesita un ajuste. Esas preguntas <strong>no se responden con argumentos técnicos a la distancia</strong>. Se responden con presencia local, con casos visibles, con una voz en español que se hace responsable frente al cliente y que construye marca propia con su propio nombre. <strong>Falhaus es esa voz.</strong></p>
+
+    <div class="hlb bl"><strong>Lo que Falhaus le aporta a ZYC no es escala. Es la traducción cultural y comercial</strong> que convierte un producto industrial importado en una propuesta confiable para el comprador argentino. Esa es la pieza que ZYC necesita y que no se puede construir a distancia.</div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:30px 0 12px;font-weight:700">Lo que sí construimos en estos meses</h3>
+    <p>Estos números no se presentan como evidencia de tamaño, sino como evidencia de <strong>capacidad de mercado</strong>: la voz local que ZYC necesita ya está construida y operando.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="lbl">Atención sostenida</div>
+        <div class="num">~20K</div>
+        <div class="desc">seguidores orgánicos en Instagram. La voz que el comprador argentino escucha cuando piensa en construcción modular.</div>
+      </div>
+      <div class="stat">
+        <div class="lbl">Operación profesional</div>
+        <div class="num">395</div>
+        <div class="desc">leads en pipeline, clasificados y trabajados con sistema profesional de seguimiento.</div>
+      </div>
+      <div class="stat">
+        <div class="lbl">Tracción real</div>
+        <div class="num">10</div>
+        <div class="desc">casas vendidas en marzo–abril 2026, con curva mensual de aceleración consistente.</div>
+      </div>
+      <div class="stat">
+        <div class="lbl">Capilaridad</div>
+        <div class="num">21</div>
+        <div class="desc">operadores regionales identificados: un canal humano en construcción para cada provincia argentina.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:30px 0 12px;font-weight:700">Tres frentes de expansión local, todos al servicio del posicionamiento de ZYC en Argentina</h3>
+    <ul class="lista">
+      <li><strong>Comunidad Falhaus, red de operadores regionales</strong><span>Programa de operadores independientes en cada provincia argentina, con acuerdo marco, kit comercial co-marcado y estructura de comisiones definida. Es el canal humano que materializa la presencia local en cada región del país.</span></li>
+      <li><strong>Posicionamiento institucional</strong><span>Vinculación con desarrolladores, gobiernos provinciales y arquitectos de alto perfil. Próxima participación en Expo Construir y Expo Real Estate (mayo–junio 2026). Es la puerta a clientes que compran de a 12, de a 80 o más unidades.</span></li>
+      <li><strong>Operación de aduana profesionalizada</strong><span>Equipo dedicado para garantizar tiempos y estándares en la importación. Convierte a ZYC en una entrega previsible, no en una apuesta logística.</span></li>
+    </ul>
+
+    <div class="hlb"><strong>El posicionamiento que proponemos.</strong> Falhaus no es un cliente entre muchos en el portfolio de ZYC. Es el <strong>vehículo estratégico</strong> que convierte la capacidad industrial de ZYC en una marca confiable, conocida y elegida en Argentina. Esa es la sociedad que estamos proponiendo construir.</div>
+  </div>
+</section>
+
+<!-- 04 · BASES ECONÓMICAS -->
+<section>
+  <div class="container">
+    <div class="section-tag"><span class="num">04</span>Las bases para escalar juntos</div>
+    <h2 class="section-title">Condiciones económicas y de gestión <em>para escalar juntos</em></h2>
+    <p class="section-intro">Para que la operación local pueda crecer al ritmo que el mercado argentino demanda, queremos consolidar con ZYC tres acuerdos. No los traemos como exigencias; los traemos como la infraestructura que, construida en conjunto, permite que esta sociedad escale en condiciones sostenibles.</p>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:18px 0 12px;font-weight:700">El esquema actual y por qué funciona</h3>
+    <p>Antes de plantear los pedidos, queremos compartir cómo opera hoy nuestro circuito financiero, porque es el que sostiene la previsibilidad de cada contenedor:</p>
+
+    <ul class="lista">
+      <li><strong>Cliente paga 60% al firmar el contrato</strong><span>Ese anticipo nos permite cubrir el 100% del pago a ZYC al momento de la producción. Es el motor que sostiene el ritmo actual.</span></li>
+      <li><strong>Cliente paga 40% restante a la llegada de la carga a Argentina</strong><span>Ese saldo cubre nuestra operación local: aduana, logística interna, instalación, posventa y margen comercial.</span></li>
+    </ul>
+
+    <p>Este modelo funciona para el grueso de las operaciones estándar (módulos individuales para clientes finales). Sobre esa base, los pedidos que traemos son los siguientes:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:24%">Eje</th>
+          <th style="width:42%">Pedido</th>
+          <th style="width:34%">Por qué importa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1 · Esquema especial de financiamiento para operaciones de mayor escala</strong></td>
+          <td>Para aproximadamente <strong>el 25% de los acuerdos</strong> (proyectos de mayor envergadura: casas club, salones, desarrollos institucionales), un esquema en el que Falhaus pague <strong>20% por adelantado</strong> al inicio de la producción y el <strong>80% restante a la llegada del contenedor a Argentina</strong>, una vez que cobramos al cliente final.</td>
+          <td>No es un plazo estándar; es un arreglo específico para operaciones grandes donde el ciclo comercial y la cobranza al cliente final se desfasan del calendario de producción. Permite a Falhaus comprometerse con proyectos institucionales sin estrangular el capital de trabajo.</td>
+        </tr>
+        <tr>
+          <td><strong>2 · Centralización de consultas en Falhaus</strong></td>
+          <td>Que ZYC derive a Falhaus <strong>toda consulta directa</strong> que reciba de Argentina (compradores, distribuidores, contactos de feria, consultas online), y que abramos juntos una conversación serena sobre cómo el trabajo comercial que Falhaus desarrolla para acompañar esas consultas hasta el cierre se refleja en la economía conjunta de cada operación, en el espíritu de socios que estamos construyendo.</td>
+          <td>Protege la operación local, asegura el control de calidad de la experiencia de cliente, ordena la política de precios en el mercado argentino y posiciona a Falhaus como la cara única de ZYC en el país. Reconocer en la economía de cada operación el aporte comercial local es la forma natural de que el esfuerzo se traduzca en valor compartido, y de que la sociedad pueda escalar con armonía a lo largo del tiempo.</td>
+        </tr>
+        <tr>
+          <td><strong>3 · Acuerdo de exclusividad para Argentina</strong></td>
+          <td>Falhaus como representante exclusivo de ZYC en Argentina, con compromiso recíproco de no establecer relaciones comerciales con otros actores argentinos que generen conflicto de canal.</td>
+          <td>Es la condición que convierte la inversión de Falhaus en marca, contenido, equipo y red de operadores en un activo compartido, no en un riesgo. Sin exclusividad, no hay incentivo para invertir al ritmo que el mercado pide.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="hlb bl"><strong>Estos tres elementos son la infraestructura sobre la que se construye una sociedad de largo plazo.</strong> El primero da flexibilidad financiera para los proyectos grandes; el segundo ordena el mercado argentino bajo una sola voz; el tercero protege la inversión que ambas empresas estamos haciendo. Con esa base, las dos crecemos juntas en condiciones predecibles.</div>
+  </div>
+</section>
+
+<!-- 05 · VISIÓN 12-24 MESES -->
+<section>
+  <div class="container">
+    <div class="section-tag"><span class="num">05</span>Visión 12-24 meses</div>
+    <h2 class="section-title">Falhaus, <em>socio central de ZYC</em> en Argentina</h2>
+    <p class="section-intro">En los mensajes recientes, Nancy expresó la disposición de ZYC a tomar a Falhaus como socio central en Argentina, con apoyo posventa, marketing y construcción de marca. Queremos capitalizar ese ofrecimiento y darle forma concreta.</p>
+
+    <div class="split">
+      <div class="col">
+        <div class="cap">● Lo que aporta Falhaus</div>
+        <h3>Mercado, marca, ejecución</h3>
+        <p>Operación local consolidada · ~20K seguidores · marca reconocida · red de operadores regionales en construcción · acceso a desarrolladores y gobiernos provinciales · profundización del posicionamiento de ZYC en cada provincia argentina.</p>
+      </div>
+      <div class="col">
+        <div class="cap">● Lo que aporta ZYC</div>
+        <h3>Producto, escala, soporte</h3>
+        <p>Fábrica directa · capacidad de producción · sistema de doble inspección · soporte posventa · co-creación de campañas y materiales de marketing · escala industrial detrás de cada pedido.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:30px 0 12px;font-weight:700">Cómo se materializa esa sociedad</h3>
+
+    <ul class="lista">
+      <li><strong>Plan de co-marketing y soporte de marca</strong><span>Materiales co-marcados, contenido editorial conjunto, presencia recíproca en redes y participación en ferias y eventos institucionales en Argentina. ZYC aporta materiales de apoyo de marca; Falhaus los traduce al código cultural local.</span></li>
+      <li><strong>Reuniones ejecutivas trimestrales con Mr. Gao</strong><span>Encuentros periódicos entre liderazgos de ambas empresas para alinear visión, revisar resultados y planificar la siguiente etapa. La continuidad del vínculo personal entre los dueños es lo que sostiene una sociedad de años.</span></li>
+      <li><strong>Showroom permanente en Argentina como vidriera conjunta</strong><span>El módulo de compensación que ZYC enviará, junto con la posibilidad —si la fábrica así lo acompaña— de sumar un módulo Apple de 20 pies, permitiría consolidar un showroom de marca conjunta, abierto a clientes finales, desarrolladores y prensa. Sería la vidriera local de ZYC en el mercado argentino.</span></li>
+    </ul>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);margin:30px 0 12px;font-weight:700">Horizonte regional · una conversación para más adelante</h3>
+    <p>El foco hoy es Argentina. Una vez consolidada la operación local y validado el esquema de trabajo conjunto, vemos un horizonte natural de expansión hacia <strong>Paraguay, Bolivia y el sur de Brasil</strong>, mercados de habla hispano-portuguesa donde Falhaus puede operar con la misma lógica de presencia local y marca confiable. <strong>No es un pedido para esta reunión</strong>; lo dejamos planteado como visión compartida, para volver a conversarlo cuando Argentina esté en régimen de crecimiento sostenido.</p>
+
+    <div class="hlb ol"><strong>El horizonte que vemos es claro:</strong> Falhaus se convierte en el operador central de ZYC en Argentina, y ZYC se convierte en el respaldo industrial y de marca que potencia ese posicionamiento. Es una sociedad en la que ambas empresas crecen juntas, en pasos sostenibles y sin sobreextenderse.</div>
+  </div>
+</section>
+
+<!-- 06 · ACUERDOS -->
+<section>
+  <div class="container">
+    <div class="section-tag"><span class="num">06</span>Para formalizar</div>
+    <h2 class="section-title">Los compromisos que dejamos <em>por escrito</em></h2>
+    <p class="section-intro">El propósito de la videoconferencia es salir con compromisos claros, en un lenguaje de socios. Estos son los puntos que proponemos formalizar.</p>
+
+    <ul class="lista">
+      <li><strong>Protocolo de doble inspección y confirmación técnica previa con el equipo de Falhaus</strong><span>Como práctica permanente de la relación, no como respuesta puntual.</span></li>
+      <li><strong>Calendario de envío del módulo de compensación ya confirmado</strong><span>Definir tiempos concretos para el envío del módulo que Nancy ya nos ofreció como gesto de buena voluntad.</span></li>
+      <li><strong>Esquema especial de financiamiento para operaciones de mayor escala</strong><span>Acuerdo escrito sobre el arreglo de 20% adelanto / 80% a la llegada para el ~25% de operaciones grandes. El esquema 60/40 estándar del cliente final continúa cubriendo el grueso de la operación.</span></li>
+      <li><strong>Centralización de consultas en Falhaus</strong><span>Falhaus como cara única de ZYC en Argentina, con derivación de toda consulta directa que llegue desde el país, y una conversación abierta sobre cómo el trabajo comercial que Falhaus desarrolla para llevar esas consultas hasta el cierre se refleja, en términos de socios, en la economía de cada operación.</span></li>
+      <li><strong>Acuerdo de exclusividad para Argentina</strong><span>Confirmación escrita de la posición de Falhaus como socio central de ZYC en el mercado argentino.</span></li>
+      <li><strong>Plan de co-marketing y soporte de marca</strong><span>Lineamientos generales y siguiente reunión específica sobre este punto en las próximas 4 semanas, ya con materiales y calendario editorial conjunto.</span></li>
+      <li><strong>Cadencia de reuniones ejecutivas trimestrales</strong><span>Definir frecuencia (trimestral) y formato (videoconferencia + visita anual cuando sea posible).</span></li>
+    </ul>
+
+    <div class="hlb"><strong>Cierre.</strong> Esta sociedad apenas comienza, y tiene todas las condiciones para convertirse en un caso de referencia: una fábrica china con capacidad industrial respaldando a un vehículo local con marca, voz propia y presencia en cada provincia argentina. ZYC pone la escala industrial; Falhaus pone la confianza, la cara y la red que el mercado argentino necesita para abrirse. Ambas empresas tienen mucho que ganar trabajando juntas. Esta conversación es para confirmar que ese camino lo vamos a recorrer como socios, con reglas claras y respeto mutuo.</div>
+
+    <div class="hlb ol" style="margin-top:22px"><strong>Una nota personal para Mr. Gao.</strong> Sabemos que detrás de ZYC hay años de trabajo, de aprendizajes y de visión. Construir una fábrica con la capacidad y la calidad que ustedes hoy ofrecen al mundo no es algo que se logre rápido. Es el resultado de decisiones acertadas a lo largo del tiempo, de un equipo cuidado, de una manera de hacer las cosas que se honra día a día. Encontrarnos hoy en este punto del camino, con la oportunidad de construir juntos algo grande en Argentina, es para nosotros motivo de orgullo y de responsabilidad. <br><br>Esta es la primera de muchas conversaciones que esperamos compartir. Pensamos esta sociedad en años, no en pedidos. Y queremos que sepan que de nuestro lado hay seriedad, paciencia y compromiso con que esta relación crezca de la manera en que ustedes la merecen. Gracias por su tiempo y por la atención que nos están dando.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand">FALHAUS</div>
+    <div class="meta">Strategic Partnership Brief · Falhaus & ZYC · Abril 2026<br>Documento preparado para la videoconferencia ejecutiva con Mr. Gao y equipo</div>
+  </div>
+</footer>
+
+</body>
+</html>
