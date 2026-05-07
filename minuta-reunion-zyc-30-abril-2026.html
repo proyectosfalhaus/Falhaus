@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falhaus & ZYC — Minuta de Reunión / Meeting Minutes · 30 April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bl:#1e3a6f;--bl2:#2c4a85;--bl3:#3d5fa3;
+  --r:#c14a3b;--r2:#a13828;
+  --o:#7a8357;--ol:#9aa578;
+  --bg:#f5f1e8;--bg2:#ede7d7;
+  --w:#ffffff;--t:#2d2d2d;--tl:#5a5a5a;
+  --br:#d9cfbe;--brl:#e8e0cf;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--t);background:var(--bg);line-height:1.7;font-size:15.5px}
+.container{max-width:1180px;margin:0 auto;padding:0 44px}
+@media(max-width:760px){.container{padding:0 22px}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--bl) 0%,var(--bl2) 60%,var(--bl3) 100%);color:var(--w);padding:84px 0 88px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-80px;right:-120px;width:480px;height:480px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--r),transparent 50%,var(--r) 100%)}
+.hero-inner{position:relative;z-index:2}
+.hero .eyebrow{display:inline-block;font-size:.66rem;letter-spacing:3.5px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:28px;padding:7px 18px;border:1px solid rgba(193,74,59,.55);border-radius:2px;background:rgba(193,74,59,.1)}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;line-height:1.18;margin-bottom:14px;letter-spacing:-.3px;max-width:920px}
+.hero h1 em{font-style:italic;color:#f0d3cc;font-weight:600}
+.hero .h1-en{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;font-weight:400;color:#e8d5ce;line-height:1.35;max-width:880px;margin-bottom:36px}
+.hero-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-top:42px;padding-top:30px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-meta .item .lbl{font-size:.6rem;letter-spacing:2.2px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:6px}
+.hero-meta .item .val{font-family:'Playfair Display',serif;font-size:1rem;color:var(--w);font-weight:600;line-height:1.45}
+.hero-meta .item .val small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;color:#d8dff0;font-weight:400;font-style:italic;margin-top:3px;letter-spacing:.3px}
+
+/* ATTENDEES */
+.attendees{background:var(--w);padding:48px 0;border-bottom:1px solid var(--br)}
+.attendees-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:980px}
+@media(max-width:760px){.attendees-grid{grid-template-columns:1fr}}
+.party{background:var(--bg);border:1px solid var(--br);border-top:4px solid var(--bl);border-radius:6px;padding:28px 30px}
+.party.zyc{border-top-color:var(--r)}
+.party h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--bl);font-weight:700;margin-bottom:4px}
+.party .h3-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--bl3);font-weight:400;margin-bottom:18px}
+.party.zyc h3{color:var(--r2)}
+.party.zyc .h3-en{color:var(--r)}
+.party ul{list-style:none;padding:0}
+.party li{padding:10px 0;border-bottom:1px dashed var(--br);font-size:.93rem;line-height:1.5}
+.party li:last-child{border-bottom:none}
+.party li strong{display:block;color:var(--bl);font-weight:600;font-size:.97rem;margin-bottom:2px}
+.party.zyc li strong{color:var(--r2)}
+.party li span{color:var(--tl);font-size:.85rem}
+.translator-row{margin-top:28px;padding:18px 24px;background:var(--bg2);border-left:3px solid var(--o);border-radius:0 4px 4px 0;max-width:980px;font-size:.92rem}
+.translator-row strong{color:var(--bl);font-weight:600}
+.translator-row .en{display:block;font-style:italic;color:var(--tl);font-size:.84rem;margin-top:4px}
+
+/* OPENING LETTER */
+.opening{background:var(--bg);padding:54px 0}
+.bil{display:grid;grid-template-columns:1fr 1fr;gap:38px;max-width:1080px;margin-bottom:8px}
+@media(max-width:760px){.bil{grid-template-columns:1fr;gap:18px}}
+.bil .col-es{padding-right:8px}
+.bil .col-en{padding-left:8px;border-left:1px solid var(--br)}
+@media(max-width:760px){.bil .col-en{padding-left:0;border-left:none;border-top:1px solid var(--br);padding-top:18px}}
+.bil .lang-tag{display:inline-block;font-size:.58rem;letter-spacing:2.4px;text-transform:uppercase;font-weight:700;margin-bottom:12px;padding:3px 10px;border-radius:2px}
+.bil .col-es .lang-tag{color:var(--bl);background:rgba(30,58,111,.08)}
+.bil .col-en .lang-tag{color:var(--r2);background:rgba(193,74,59,.08)}
+.bil p{font-size:.96rem;line-height:1.78;margin-bottom:13px;color:var(--t);max-width:none}
+.bil p.italic{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--bl)}
+.bil .col-en p{color:var(--t)}
+.bil .col-en p.italic{color:var(--bl3)}
+
+/* SECTION */
+section.topic{padding:48px 0;border-bottom:1px solid var(--br)}
+section.topic:nth-child(even){background:var(--w)}
+.section-tag{display:inline-flex;align-items:center;gap:12px;font-size:.66rem;letter-spacing:3px;text-transform:uppercase;color:var(--r);font-weight:700;margin-bottom:8px}
+.section-tag .num{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--bl);letter-spacing:0;font-weight:700;line-height:1}
+.section-title{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--bl);line-height:1.25;margin-bottom:6px;letter-spacing:-.2px;max-width:920px}
+.section-title-en{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:var(--bl3);font-weight:400;margin-bottom:24px;max-width:920px}
+
+.bil-block{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:1080px}
+@media(max-width:760px){.bil-block{grid-template-columns:1fr;gap:18px}}
+.bil-block .col-es{padding-right:8px}
+.bil-block .col-en{padding-left:8px;border-left:1px solid var(--br)}
+@media(max-width:760px){.bil-block .col-en{padding-left:0;border-left:none;border-top:1px solid var(--br);padding-top:18px}}
+.bil-block p{font-size:.95rem;line-height:1.78;margin-bottom:12px;color:var(--t);max-width:none}
+.bil-block p strong{color:var(--bl);font-weight:600}
+.bil-block ul{list-style:none;padding:0;margin:8px 0 12px}
+.bil-block ul li{padding:7px 0 7px 22px;position:relative;font-size:.93rem;line-height:1.65;color:var(--t)}
+.bil-block ul li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:2px;background:var(--r)}
+.bil-block ul li strong{color:var(--bl);font-weight:600}
+
+.hlb{border-left:4px solid var(--r);background:linear-gradient(95deg,rgba(193,74,59,.07),rgba(193,74,59,.01));padding:14px 22px;border-radius:0 6px 6px 0;margin:14px 0;font-size:.92rem;line-height:1.7}
+.hlb strong{color:var(--bl);font-weight:600}
+.hlb.bl{border-left-color:var(--bl3);background:linear-gradient(95deg,rgba(61,95,163,.06),rgba(61,95,163,.01))}
+.hlb.ol{border-left-color:var(--o);background:linear-gradient(95deg,rgba(122,131,87,.07),rgba(122,131,87,.01))}
+
+/* COMMITMENTS TABLE */
+.commit-section{background:var(--bg);padding:54px 0}
+.commit-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:1080px;margin-top:20px}
+@media(max-width:760px){.commit-grid{grid-template-columns:1fr}}
+.commit-card{background:var(--w);border:1px solid var(--br);border-top:4px solid var(--bl);border-radius:6px;padding:26px 28px}
+.commit-card.zyc{border-top-color:var(--r)}
+.commit-card h4{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--bl);font-weight:700;margin-bottom:2px}
+.commit-card .h4-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.85rem;color:var(--bl3);font-weight:400;margin-bottom:18px}
+.commit-card.zyc h4{color:var(--r2)}
+.commit-card.zyc .h4-en{color:var(--r)}
+.commit-card ol{list-style:none;counter-reset:c;padding:0}
+.commit-card ol li{counter-increment:c;padding:12px 0 12px 38px;border-bottom:1px dashed var(--br);position:relative;font-size:.92rem;line-height:1.62}
+.commit-card ol li::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;top:13px;font-family:'Playfair Display',serif;font-weight:700;color:var(--r);font-size:.95rem}
+.commit-card.zyc ol li::before{color:var(--bl)}
+.commit-card ol li:last-child{border-bottom:none}
+.commit-card ol li strong{display:block;color:var(--bl);font-weight:600;margin-bottom:3px;font-size:.95rem}
+.commit-card.zyc ol li strong{color:var(--r2)}
+.commit-card ol li span{display:block;color:var(--tl);font-size:.83rem;font-style:italic;line-height:1.55;margin-top:3px}
+
+/* NEXT STEPS */
+.next{background:var(--w);padding:54px 0}
+.next-list{max-width:1080px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
+.next-item{background:var(--bg);border:1px solid var(--br);border-left:4px solid var(--o);border-radius:0 6px 6px 0;padding:20px 22px}
+.next-item .when{font-size:.6rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--o);margin-bottom:6px}
+.next-item h5{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--bl);font-weight:700;margin-bottom:4px;line-height:1.35}
+.next-item .en{font-family:'Playfair Display',serif;font-style:italic;font-size:.84rem;color:var(--bl3);margin-bottom:10px;line-height:1.4}
+.next-item p{font-size:.85rem;line-height:1.6;color:var(--t);margin:0}
+
+/* ACK */
+.ack{background:linear-gradient(135deg,var(--bl) 0%,var(--bl2) 100%);color:var(--w);padding:54px 0;position:relative}
+.ack::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--r),transparent)}
+.ack .section-tag{color:#f0d3cc}
+.ack .section-tag .num{color:var(--w)}
+.ack .section-title{color:var(--w)}
+.ack .section-title-en{color:#e8d5ce}
+.ack .bil-block .col-en{border-left-color:rgba(255,255,255,.18)}
+.ack .bil-block p{color:#e8e6e0}
+.ack .bil-block p strong{color:#f0d3cc}
+.ack .ack-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-left:4px solid #f0d3cc;border-radius:0 6px 6px 0;padding:22px 26px;margin:14px 0;font-size:.95rem;line-height:1.7}
+.ack .ack-card .who{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--w);font-weight:700;margin-bottom:6px}
+
+/* FOOTER */
+footer{background:var(--bl);color:#d8dff0;padding:54px 0 40px;text-align:center;position:relative}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--r),transparent)}
+footer .brand{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--w);font-weight:700;letter-spacing:1.5px;margin-bottom:6px}
+footer .tag{font-size:.66rem;letter-spacing:3px;color:#a5b1cc;text-transform:uppercase;margin-bottom:24px}
+footer .meta{font-size:.78rem;color:#a5b1cc;opacity:.85;margin-top:18px;line-height:1.7}
+footer .meta-en{font-size:.74rem;color:#a5b1cc;opacity:.7;font-style:italic;margin-top:4px}
+
+/* PRINT */
+@media print{
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  section,.attendees,.opening,.commit-section,.next,.ack{page-break-inside:avoid;padding:30px 0}
+  .hlb,.commit-card,.next-item,.ack-card,.party{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="eyebrow">Falhaus × ZYC · Minuta de Reunión / Meeting Minutes</div>
+    <h1>Construyendo una <em>relación a largo plazo</em> entre Falhaus y ZYC</h1>
+    <div class="h1-en">Building a long-term partnership between Falhaus and ZYC</div>
+    <div class="hero-meta">
+      <div class="item"><div class="lbl">Fecha · Date</div><div class="val">30 de abril, 2026<small>April 30, 2026</small></div></div>
+      <div class="item"><div class="lbl">Modalidad · Format</div><div class="val">Videollamada<small>Video conference</small></div></div>
+      <div class="item"><div class="lbl">Propósito · Purpose</div><div class="val">Acuerdos comerciales y de cooperación<small>Commercial and cooperation agreements</small></div></div>
+      <div class="item"><div class="lbl">Documento emitido por · Issued by</div><div class="val">Equipo Comercial Falhaus<small>Falhaus Commercial Team</small></div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ATTENDEES -->
+<section class="attendees">
+  <div class="container">
+    <div class="attendees-grid">
+      <div class="party">
+        <h3>Falhaus · Argentina</h3>
+        <div class="h3-en">Falhaus team</div>
+        <ul>
+          <li><strong>Federico Lami</strong><span>Líder comercial / Commercial lead</span></li>
+          <li><strong>Juan Pablo</strong><span>Equipo comercial / Commercial team</span></li>
+          <li><strong>Gabriel Berutti</strong><span>Equipo comercial / Commercial team</span></li>
+        </ul>
+      </div>
+      <div class="party zyc">
+        <h3>ZYC · China</h3>
+        <div class="h3-en">ZYC team</div>
+        <ul>
+          <li><strong>Mr. Gao</strong><span>Director General / Chief Executive Officer</span></li>
+          <li><strong>Lisa</strong><span>Equipo ZYC / ZYC team</span></li>
+          <li><strong>Nancy</strong><span>Representante comercial / Commercial representative</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="translator-row">
+      <strong>Sebastián</strong> — Intérprete español–chino, acompañó la reunión y la traducción de todos los temas.
+      <span class="en">Sebastián — Spanish–Chinese interpreter who accompanied the meeting and the translation of every topic.</span>
+    </div>
+  </div>
+</section>
+
+<!-- OPENING -->
+<section class="opening">
+  <div class="container">
+    <div class="bil">
+      <div class="col-es">
+        <div class="lang-tag">Español</div>
+        <p class="italic">La reunión inició con un agradecimiento mutuo por la posibilidad de generar este encuentro.</p>
+        <p>Por parte de <strong>ZYC</strong>, el Sr. Gao y su equipo manifestaron su voluntad de continuar fortaleciendo el proceso de cooperación y mejora continua entre ambas partes.</p>
+        <p>Por parte de <strong>Falhaus</strong>, se agradeció la apertura y se propuso encarar la conversación con una mirada hacia adelante: construir camino en equipo, mejorando lo que vaya surgiendo. Se valoró la actitud constructiva de ZYC y se ratificó el deseo de fortalecer la relación en el tiempo.</p>
+      </div>
+      <div class="col-en">
+        <div class="lang-tag">English</div>
+        <p class="italic">The meeting opened with mutual appreciation for the opportunity to hold this conversation.</p>
+        <p>From <strong>ZYC</strong>, Mr. Gao and his team expressed their commitment to continue strengthening the cooperation and continuous improvement process between both parties.</p>
+        <p>From <strong>Falhaus</strong>, openness was acknowledged with thanks. The conversation was framed forward-looking: to build the path together, improving along the way. ZYC's constructive attitude was valued, and the desire to strengthen the partnership over time was reaffirmed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPIC 1 -->
+<section class="topic">
+  <div class="container">
+    <div class="section-tag"><span class="num">01</span><span>Refuerzo conjunto del proceso · Joint process strengthening</span></div>
+    <h2 class="section-title">Refuerzo del proceso de calidad y coordinación con la fábrica</h2>
+    <div class="section-title-en">Strengthening of the quality process and factory coordination</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <p>Ambas partes intercambiaron observaciones surgidas en una entrega previa, oportunamente compartidas con Nancy. La conversación se centró en el <strong>refuerzo de la coordinación con la fábrica</strong>, particularmente en la verificación cruzada de pedidos y los procesos de embalaje.</p>
+        <p>El Sr. Gao reafirmó el espíritu de cooperación y comunicó la decisión de <strong>enviar un módulo Z con calidad reforzada, sin cargo</strong>, como gesto de fortalecimiento de la relación bilateral. Falhaus agradeció el gesto y confirmó que esa unidad será destinada al showroom, para exhibir la calidad de los productos de la fábrica.</p>
+        <div class="hlb"><strong>Encuadre:</strong> ambas partes acordaron tomar la conversación como un aprendizaje compartido en el camino de consolidar la relación comercial a largo plazo.</div>
+      </div>
+      <div class="col-en">
+        <p>Both parties exchanged observations arising from a previous delivery, previously shared with Nancy. The conversation focused on <strong>strengthening factory coordination</strong>, particularly around cross-verification of orders and packaging processes.</p>
+        <p>Mr. Gao reaffirmed the spirit of cooperation and communicated the decision to <strong>ship an improved-quality Z module, free of charge</strong>, as a gesture to strengthen the bilateral relationship. Falhaus thanked the gesture and confirmed that this unit will be assigned to the showroom, to display the quality of the factory's products.</p>
+        <div class="hlb"><strong>Framing:</strong> both parties agreed to take this conversation as a shared lesson on the path toward consolidating the long-term commercial relationship.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPIC 2 -->
+<section class="topic">
+  <div class="container">
+    <div class="section-tag"><span class="num">02</span><span>Adecuación eléctrica · Electrical adaptation</span></div>
+    <h2 class="section-title">Adecuación eléctrica conjunta</h2>
+    <div class="section-title-en">Joint electrical adaptation</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <p>Ambas partes alinearon las <strong>especificaciones eléctricas para futuras entregas</strong>, asegurando que las configuraciones (bifásica o trifásica) sean confirmadas previamente para coincidir con la preparación del cliente final.</p>
+        <p>El Sr. Gao informó que, en el marco de la cooperación a largo plazo entre ambas partes, <strong>ZYC aportará los USD 350 correspondientes a la adecuación eléctrica realizada</strong>.</p>
+        <p>Falhaus agradeció el gesto, destacando que es un aprendizaje conjunto entre ambas compañías que fortalece el trabajo en equipo.</p>
+      </div>
+      <div class="col-en">
+        <p>Both parties aligned the <strong>electrical specifications for future deliveries</strong>, ensuring that configurations (two-phase or three-phase) are confirmed in advance to match the end client's setup.</p>
+        <p>Mr. Gao stated that, within the framework of long-term cooperation between both parties, <strong>ZYC will contribute the USD 350 corresponding to the electrical adaptation completed</strong>.</p>
+        <p>Falhaus thanked the gesture, emphasizing that it is a shared learning between both companies that strengthens the teamwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPIC 3 -->
+<section class="topic">
+  <div class="container">
+    <div class="section-tag"><span class="num">03</span><span>Mercado argentino · Argentine market</span></div>
+    <h2 class="section-title">Posicionamiento y crecimiento de Falhaus en Argentina</h2>
+    <div class="section-title-en">Falhaus positioning and growth in Argentina</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <p>Falhaus compartió el estado actual de su operación comercial:</p>
+        <ul>
+          <li><strong>+20.000 personas</strong> sumadas a la comunidad de redes sociales en los últimos meses.</li>
+          <li><strong>Más de 400 potenciales clientes</strong> activos en el pipeline comercial.</li>
+          <li><strong>10% de cierre</strong> ya concretado sobre esa base.</li>
+          <li><strong>Cerca de 8.000 personas contactadas</strong> para construir ese pipeline.</li>
+          <li>Argentina cuenta con <strong>24 provincias</strong>; Falhaus ya tiene presencia comercial en <strong>4 de ellas</strong> y proyecta llegar a cada una.</li>
+        </ul>
+        <div class="hlb bl">Falhaus está comercializando con <strong>el mejor precio del mercado argentino</strong> y un margen acotado, alineado con la política de precios competitivos de ZYC en su mercado de origen.</div>
+      </div>
+      <div class="col-en">
+        <p>Falhaus shared the current state of its commercial operation:</p>
+        <ul>
+          <li><strong>+20,000 people</strong> joined the social media community over recent months.</li>
+          <li><strong>Over 400 potential clients</strong> active in the commercial pipeline.</li>
+          <li><strong>10% conversion</strong> already achieved over that base.</li>
+          <li><strong>Around 8,000 people contacted</strong> to build that pipeline.</li>
+          <li>Argentina has <strong>24 provinces</strong>; Falhaus already operates commercially in <strong>4</strong> and plans to reach every one.</li>
+        </ul>
+        <div class="hlb bl">Falhaus is selling at <strong>the most competitive price in the Argentine market</strong>, with a tight margin, aligned with ZYC's competitive pricing policy in its home market.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPIC 4 -->
+<section class="topic">
+  <div class="container">
+    <div class="section-tag"><span class="num">04</span><span>Representación exclusiva · Exclusive representation</span></div>
+    <h2 class="section-title">Propuesta de representación exclusiva de la marca ZYC en Argentina</h2>
+    <div class="section-title-en">Proposal for exclusive ZYC brand representation in Argentina</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <p>Falhaus propuso constituirse como <strong>representante y embajador exclusivo de la marca ZYC en Argentina</strong>, con la intención de centralizar la atención de toda consulta proveniente de ese mercado y unificar la experiencia comercial de los clientes locales.</p>
+        <p>Falhaus compartió que ha recibido aproximaciones de otras fábricas chinas interesadas en ingresar a Argentina, eligiendo priorizar la relación a largo plazo con ZYC.</p>
+        <p>El Sr. Gao manifestó que <strong>la propuesta es viable</strong> y que es un punto especialmente valorado por su parte. A modo de referencia, compartió el modelo aplicado con su representante único en Corea, que contempla:</p>
+        <ul>
+          <li><strong>Contrato de representación</strong> con cuota asociada.</li>
+          <li><strong>Venta mínima anual</strong> a cumplir.</li>
+          <li>Política donde el representante <strong>no suma ganancia adicional</strong> sobre el precio de Alibaba, y se encarga de los servicios de instalación en el país.</li>
+        </ul>
+        <div class="hlb">Acuerdo: ambas partes definirán por escrito los detalles del esquema; ZYC enviará una propuesta formal para revisión y discusión.</div>
+      </div>
+      <div class="col-en">
+        <p>Falhaus proposed to become the <strong>exclusive representative and ambassador of the ZYC brand in Argentina</strong>, with the goal of centralizing every inquiry from that market and unifying the commercial experience for local clients.</p>
+        <p>Falhaus shared that it has received approaches from other Chinese factories interested in entering Argentina, choosing to prioritize the long-term relationship with ZYC.</p>
+        <p>Mr. Gao stated that <strong>the proposal is viable</strong> and that it is a particularly valued point for him. As a reference, he shared the model applied with his exclusive representative in Korea, which includes:</p>
+        <ul>
+          <li><strong>Representation contract</strong> with associated fee.</li>
+          <li><strong>Annual minimum sales</strong> commitment.</li>
+          <li>A policy where the representative <strong>does not add extra margin</strong> over the Alibaba price, and is responsible for installation services in the country.</li>
+        </ul>
+        <div class="hlb">Agreement: both parties will define the details of the scheme in writing; ZYC will send a formal proposal for review and discussion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPIC 5 -->
+<section class="topic">
+  <div class="container">
+    <div class="section-tag"><span class="num">05</span><span>Showroom · Showroom</span></div>
+    <h2 class="section-title">Solicitud de Apple Cabin para showroom en Argentina</h2>
+    <div class="section-title-en">Apple Cabin sample request for Argentine showroom</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <p>Falhaus solicitó al Sr. Gao el envío en préstamo, sin cargo, de <strong>una unidad Apple Cabin de 20 pies (aproximadamente 13 m²)</strong> para incorporarla al showroom de Falhaus, junto con la casa expandible y el módulo Z ya disponibles.</p>
+        <p>El argumento central: en el mercado argentino, los clientes rara vez compran un producto sin verlo. Contar con una unidad física en el showroom permite mostrar el producto, sumar ventas y abrir un nicho de mercado que hoy no se está capturando.</p>
+        <p>El Sr. Gao confirmó que la solicitud <strong>es viable</strong> y solicitó que Falhaus le envíe la <strong>especificación técnica del modelo requerido</strong> para coordinar con la fábrica.</p>
+      </div>
+      <div class="col-en">
+        <p>Falhaus requested Mr. Gao to ship, on loan and free of charge, <strong>one Apple Cabin unit of 20 feet (approximately 13 m²)</strong>, to be added to the Falhaus showroom alongside the expandable house and the Z module already on display.</p>
+        <p>The core argument: in the Argentine market, clients rarely purchase a product without seeing it first. Having a physical unit in the showroom enables product demonstration, increases sales and opens a market niche that is currently not being captured.</p>
+        <p>Mr. Gao confirmed that the request <strong>is viable</strong> and asked Falhaus to send the <strong>technical specification of the required model</strong> in order to coordinate with the factory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPIC 6 -->
+<section class="topic">
+  <div class="container">
+    <div class="section-tag"><span class="num">06</span><span>Financiamiento · Financing</span></div>
+    <h2 class="section-title">Esquema de financiamiento para operaciones puntuales</h2>
+    <div class="section-title-en">Financing scheme for selective operations</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <p>Falhaus presentó la modalidad comercial vigente con sus clientes en Argentina, que contempla <strong>dos esquemas de pago</strong> según el perfil de la operación:</p>
+        <ul>
+          <li><strong>Esquema A — pago anticipado mayoritario:</strong> el cliente abona 60% al firmar y 40% al recibir la mercadería.</li>
+          <li><strong>Esquema B — pago al arribo:</strong> el cliente entrega una seña inicial y abona el saldo al recibir la mercadería.</li>
+        </ul>
+        <p>Para el segundo esquema, en <strong>operaciones puntuales y selectivas</strong> ("contadas con los dedos de una mano"), Falhaus planteó la posibilidad de operar con ZYC bajo un esquema flexible análogo: <strong>20% transferido al confirmar el pedido y el 80% restante cuando la mercadería arriba al puerto de Buenos Aires</strong>.</p>
+        <p>El Sr. Gao manifestó que el esquema <strong>es viable en su intención</strong>. El porcentaje específico será discutido y definido entre ambas partes en próxima conversación.</p>
+        <div class="hlb ol"><strong>Aclaración:</strong> esta modalidad es complementaria al esquema estándar y se aplicará exclusivamente a operaciones selectivas con productos de menor envergadura.</div>
+      </div>
+      <div class="col-en">
+        <p>Falhaus presented its current commercial scheme with clients in Argentina, which contemplates <strong>two payment modalities</strong> depending on the operation profile:</p>
+        <ul>
+          <li><strong>Scheme A — primarily upfront payment:</strong> the client pays 60% upon signing and 40% upon receiving the merchandise.</li>
+          <li><strong>Scheme B — payment upon arrival:</strong> the client provides an initial deposit and pays the balance upon receiving the merchandise.</li>
+        </ul>
+        <p>For the second scheme, in <strong>selective and specific operations</strong> ("countable on the fingers of one hand"), Falhaus raised the possibility of operating with ZYC under an analogous flexible scheme: <strong>20% transferred upon order confirmation and the remaining 80% paid when the merchandise arrives at the port of Buenos Aires</strong>.</p>
+        <p>Mr. Gao stated that the scheme <strong>is viable in principle</strong>. The specific percentage will be discussed and defined between both parties in an upcoming conversation.</p>
+        <div class="hlb ol"><strong>Clarification:</strong> this modality complements the standard scheme and will apply exclusively to selective operations with smaller products.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPIC 7 -->
+<section class="topic">
+  <div class="container">
+    <div class="section-tag"><span class="num">07</span><span>Visita a Argentina · Visit to Argentina</span></div>
+    <h2 class="section-title">Próxima visita del equipo ZYC a Argentina</h2>
+    <div class="section-title-en">Upcoming ZYC team visit to Argentina</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <p>El Sr. Gao confirmó que, a partir de la semana posterior al Día Internacional del Trabajador, comenzará a <strong>gestionar y planificar la visita a Argentina</strong>. La visita podría ser realizada por el Sr. Gao en persona o por un compañero del equipo de trabajo.</p>
+        <p>Falhaus se comprometió a recibir al equipo de ZYC y a acompañarlos a recorrer los distintos puntos del país donde la empresa tiene representación comercial. En particular, se mencionó:</p>
+        <ul>
+          <li><strong>Provincia de Neuquén — Vaca Muerta:</strong> epicentro de la actividad petrolera argentina, donde Falhaus ya cuenta con un módulo destinado a showroom.</li>
+        </ul>
+        <p>El Sr. Gao mencionó la intención de traer <strong>vino chino y sake</strong> para compartir. Falhaus correspondió con la invitación a disfrutar vino argentino, asado y un partido de Boca Juniors.</p>
+        <p>ZYC también solicitará apoyo de Falhaus para concretar la logística de la visita.</p>
+      </div>
+      <div class="col-en">
+        <p>Mr. Gao confirmed that, starting the week following International Workers' Day, he will begin to <strong>arrange and plan the visit to Argentina</strong>. The visit may be undertaken by Mr. Gao personally or by a colleague from the team.</p>
+        <p>Falhaus committed to host the ZYC team and to accompany them to the different commercial locations Falhaus operates across the country. In particular, the following was mentioned:</p>
+        <ul>
+          <li><strong>Neuquén Province — Vaca Muerta:</strong> the epicenter of Argentine oil activity, where Falhaus already has a module assigned to showroom use.</li>
+        </ul>
+        <p>Mr. Gao mentioned the intention to bring <strong>Chinese wine and sake</strong> to share. Falhaus reciprocated with an invitation to enjoy Argentine wine, asado and a Boca Juniors football match.</p>
+        <p>ZYC will also request Falhaus' support to coordinate the logistics of the visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENTS -->
+<section class="commit-section">
+  <div class="container">
+    <div class="section-tag"><span class="num">08</span><span>Compromisos asumidos · Commitments</span></div>
+    <h2 class="section-title">Compromisos asumidos por cada parte</h2>
+    <div class="section-title-en">Commitments assumed by each party</div>
+    <div class="commit-grid">
+      <div class="commit-card">
+        <h4>ZYC · China</h4>
+        <div class="h4-en">ZYC commitments</div>
+        <ol>
+          <li><strong>Envío de módulo Z con calidad reforzada, sin cargo</strong><span>A goodwill gesture to strengthen the bilateral cooperation, in connection with a previous delivery / Gesto de cooperación para fortalecer la relación bilateral, vinculado a una entrega previa.</span></li>
+          <li><strong>Aporte de USD 350 — adecuación eléctrica</strong><span>ZYC contribution toward the electrical adaptation completed, within the long-term cooperation framework / Aporte de ZYC a la adecuación eléctrica realizada, en el marco de la cooperación a largo plazo.</span></li>
+          <li><strong>Envío del Apple Cabin (20 pies / ~13 m²) para showroom</strong><span>Pending the technical specification to be sent by Falhaus / Pendiente de recibir la especificación técnica por parte de Falhaus.</span></li>
+          <li><strong>Propuesta escrita de representación exclusiva en Argentina</strong><span>Detailed terms (fee, minimum sales, services and conditions) to be shared in writing / Términos detallados (cuota, venta mínima, servicios y condiciones) a ser compartidos por escrito.</span></li>
+          <li><strong>Definición del porcentaje del esquema de financiamiento puntual</strong><span>To be discussed and agreed between both parties / A discutir y acordar entre ambas partes.</span></li>
+          <li><strong>Planificación de la visita a Argentina</strong><span>Starting the week after International Workers' Day / Desde la semana posterior al Día del Trabajador.</span></li>
+          <li><strong>Profundización de procesos de control compartido</strong><span>Joint commitment ratified by Mr. Gao to strengthen quality in future deliveries / Compromiso conjunto ratificado por el Sr. Gao para fortalecer la calidad en futuras entregas.</span></li>
+        </ol>
+      </div>
+      <div class="commit-card zyc">
+        <h4>Falhaus · Argentina</h4>
+        <div class="h4-en">Falhaus commitments</div>
+        <ol>
+          <li><strong>Envío de la especificación técnica del Apple Cabin</strong><span>To enable factory coordination of the showroom unit / Para habilitar la coordinación con la fábrica de la unidad para showroom.</span></li>
+          <li><strong>Revisión de la propuesta escrita de representación exclusiva</strong><span>Once received from ZYC, to advance the written agreement step by step / Una vez recibida de ZYC, para avanzar el acuerdo escrito paso a paso.</span></li>
+          <li><strong>Recepción y acompañamiento del equipo ZYC en Argentina</strong><span>Including showroom visits across the country, with Neuquén – Vaca Muerta as a key destination / Incluyendo recorrida por los puntos comerciales del país, con Neuquén – Vaca Muerta como destino clave.</span></li>
+          <li><strong>Continuidad de la política de precios competitivos en Argentina</strong><span>Aligned with ZYC's commercial positioning / Alineada con el posicionamiento comercial de ZYC.</span></li>
+          <li><strong>Centralización exclusiva de las consultas argentinas</strong><span>To unify the local commercial experience and protect the long-term partnership / Para unificar la experiencia comercial local y proteger la relación a largo plazo.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="next">
+  <div class="container">
+    <div class="section-tag"><span class="num">09</span><span>Próximos pasos · Next steps</span></div>
+    <h2 class="section-title">Hoja de ruta inmediata</h2>
+    <div class="section-title-en">Immediate roadmap</div>
+    <div class="next-list">
+      <div class="next-item">
+        <div class="when">Falhaus · Inmediato / Immediate</div>
+        <h5>Envío de especificación técnica del Apple Cabin</h5>
+        <div class="en">Send Apple Cabin technical specification</div>
+        <p>Documento técnico para que el Sr. Gao pueda coordinar con la fábrica el envío de la unidad para showroom.<br><em>Technical document so that Mr. Gao can coordinate the showroom unit shipment with the factory.</em></p>
+      </div>
+      <div class="next-item">
+        <div class="when">ZYC · Próxima semana / Next week</div>
+        <h5>Propuesta escrita de representación exclusiva</h5>
+        <div class="en">Written proposal for exclusive representation</div>
+        <p>Documento con términos del acuerdo (cuota, venta mínima anual, condiciones de servicio) para revisión de ambas partes.<br><em>Document with the terms (fee, annual minimum sales, service conditions) for review by both parties.</em></p>
+      </div>
+      <div class="next-item">
+        <div class="when">Ambas partes / Both parties</div>
+        <h5>Definición del porcentaje de financiamiento puntual</h5>
+        <div class="en">Definition of the selective financing percentage</div>
+        <p>Conversación dedicada para acordar el porcentaje del esquema de financiamiento aplicable a operaciones específicas.<br><em>Dedicated conversation to agree on the financing scheme percentage applicable to selective operations.</em></p>
+      </div>
+      <div class="next-item">
+        <div class="when">ZYC · Post Día del Trabajador / Post Workers' Day</div>
+        <h5>Planificación de visita a Argentina</h5>
+        <div class="en">Argentina visit planning</div>
+        <p>Inicio de la gestión de visa, agenda y logística por parte del Sr. Gao y su equipo.<br><em>Start of visa management, agenda and logistics by Mr. Gao and his team.</em></p>
+      </div>
+      <div class="next-item">
+        <div class="when">Continuidad / Ongoing</div>
+        <h5>Comunicación a través de Nancy</h5>
+        <div class="en">Ongoing communication through Nancy</div>
+        <p>Nancy mantiene la coordinación operativa diaria entre Falhaus y ZYC.<br><em>Nancy maintains the daily operational coordination between Falhaus and ZYC.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACKNOWLEDGEMENTS -->
+<section class="ack">
+  <div class="container">
+    <div class="section-tag"><span class="num">10</span><span>Reconocimientos · Acknowledgements</span></div>
+    <h2 class="section-title">Reconocimientos finales de la reunión</h2>
+    <div class="section-title-en">Closing acknowledgements</div>
+    <div class="bil-block">
+      <div class="col-es">
+        <div class="ack-card">
+          <div class="who">Nancy</div>
+          Falhaus expresó un reconocimiento explícito a la gestión y representación de Nancy, destacándola como un gran recurso, una persona presente todo el tiempo y una gran profesional. El Sr. Gao confirmó que ZYC está cultivando a Nancy para convertirse en una ejecutiva profesional de la empresa, "la mejor de todas".
+        </div>
+        <div class="ack-card">
+          <div class="who">Sebastián</div>
+          Ambas partes agradecieron la traducción y el acompañamiento de Sebastián durante toda la reunión, destacando su amabilidad y profesionalismo.
+        </div>
+        <p style="margin-top:18px;font-style:italic;color:#e8d5ce;">La reunión cerró con saludos cálidos, deseos de un feliz Día Internacional del Trabajador y la confirmación mutua de que ambas partes desean construir una cooperación de largo plazo, sostenida en una conversación positiva y en el crecimiento conjunto.</p>
+      </div>
+      <div class="col-en">
+        <div class="ack-card">
+          <div class="who">Nancy</div>
+          Falhaus expressed an explicit acknowledgement of Nancy's management and representation, describing her as a great resource, a person who is consistently present, and a great professional. Mr. Gao confirmed that ZYC is cultivating Nancy to become a professional executive within the company, "the best of all".
+        </div>
+        <div class="ack-card">
+          <div class="who">Sebastián</div>
+          Both parties thanked Sebastián for his translation and support throughout the meeting, highlighting his kindness and professionalism.
+        </div>
+        <p style="margin-top:18px;font-style:italic;color:#e8d5ce;">The meeting closed with warm greetings, best wishes for a happy International Workers' Day and the mutual confirmation that both parties wish to build a long-term cooperation, sustained by a positive conversation and shared growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="brand">FALHAUS</div>
+    <div class="tag">Industrialised housing · Argentina</div>
+    <div class="meta">Documento emitido por el equipo comercial de Falhaus · 30 de abril de 2026<br>Para registro y seguimiento de los acuerdos alcanzados con ZYC.</div>
+    <div class="meta-en">Document issued by the Falhaus commercial team · April 30, 2026<br>For the record and follow-up of the agreements reached with ZYC.</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falhaus × ZYC — Working Checklist · April 30, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bl:#1e3a6f;--bl2:#2c4a85;--bl3:#3d5fa3;
+  --r:#c14a3b;--r2:#a13828;
+  --o:#7a8357;--ol:#9aa578;
+  --bg:#f5f1e8;--bg2:#ede7d7;
+  --w:#ffffff;--t:#2d2d2d;--tl:#5a5a5a;
+  --br:#d9cfbe;--brl:#e8e0cf;
+  --pend:#9aa578;--prog:#d4942a;--done:#5a8a4a;--block:#c14a3b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--t);background:var(--bg);line-height:1.65;font-size:14.5px}
+.container{max-width:1280px;margin:0 auto;padding:0 36px}
+@media(max-width:760px){.container{padding:0 18px}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--bl) 0%,var(--bl2) 60%,var(--bl3) 100%);color:var(--w);padding:48px 0 52px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--r),transparent 50%,var(--r) 100%)}
+.hero .eyebrow{display:inline-block;font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:16px;padding:5px 14px;border:1px solid rgba(193,74,59,.55);border-radius:2px;background:rgba(193,74,59,.1)}
+.hero h1{font-family:'Playfair Display',serif;font-size:1.95rem;font-weight:700;line-height:1.2;margin-bottom:6px;letter-spacing:-.2px}
+.hero h1 em{font-style:italic;color:#f0d3cc;font-weight:600}
+.hero .h1-en{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;font-weight:400;color:#e8d5ce;margin-bottom:24px}
+.hero-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px;margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-meta .item .lbl{font-size:.56rem;letter-spacing:2px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:4px}
+.hero-meta .item .val{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--w);font-weight:600;line-height:1.35}
+.hero-meta .item .val small{display:block;font-family:'Inter',sans-serif;font-size:.7rem;color:#d8dff0;font-weight:400;font-style:italic;margin-top:2px}
+
+/* LEGEND */
+.legend{background:var(--w);padding:18px 0;border-bottom:1px solid var(--br);font-size:.78rem}
+.legend-inner{display:flex;flex-wrap:wrap;gap:18px 26px;align-items:center}
+.legend-inner > strong{color:var(--bl);font-weight:600;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;margin-right:6px}
+.lg{display:inline-flex;align-items:center;gap:6px;color:var(--tl)}
+.lg .chip{display:inline-block;width:14px;height:14px;border-radius:3px;border:1.5px solid currentColor}
+.lg.pend{color:var(--pend)}.lg.prog{color:var(--prog)}.lg.done{color:var(--done)}.lg.block{color:var(--block)}
+.lg.done .chip{background:var(--done);border-color:var(--done)}
+.lg.prog .chip{background:repeating-linear-gradient(135deg,var(--prog),var(--prog) 3px,transparent 3px,transparent 6px);border-color:var(--prog)}
+.lg.block .chip{background:var(--block);border-color:var(--block)}
+
+/* SECTION */
+section{padding:34px 0;border-bottom:1px solid var(--br)}
+section.alt{background:var(--w)}
+.sec-head{margin-bottom:18px}
+.sec-tag{display:inline-flex;align-items:center;gap:10px;font-size:.62rem;letter-spacing:2.6px;text-transform:uppercase;color:var(--r);font-weight:700;margin-bottom:6px}
+.sec-tag .num{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);letter-spacing:0;font-weight:700;line-height:1}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--bl);line-height:1.22;margin-bottom:2px;letter-spacing:-.2px}
+.sec-title-en{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--bl3);font-weight:400}
+
+/* TOPICS LIST */
+.topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:14px;margin-top:14px}
+.topic{background:var(--w);border:1px solid var(--br);border-left:3px solid var(--bl3);border-radius:0 5px 5px 0;padding:14px 18px}
+section.alt .topic{background:var(--bg)}
+.topic .num{display:inline-block;font-family:'Playfair Display',serif;font-size:.95rem;color:var(--r);font-weight:700;margin-right:8px}
+.topic h4{display:inline;font-family:'Playfair Display',serif;font-size:1rem;color:var(--bl);font-weight:700}
+.topic h4 .en{display:block;font-style:italic;font-size:.82rem;color:var(--bl3);font-weight:400;margin-top:1px}
+.topic p{font-size:.86rem;line-height:1.6;color:var(--t);margin-top:8px}
+.topic p .en{display:block;color:var(--tl);font-style:italic;font-size:.78rem;margin-top:3px;line-height:1.55}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin-top:12px;border:1px solid var(--br);border-radius:6px;background:var(--w)}
+table.tracker{width:100%;border-collapse:collapse;font-size:.84rem;min-width:920px}
+table.tracker thead th{background:var(--bl);color:var(--w);text-align:left;padding:11px 12px;font-size:.62rem;letter-spacing:1.6px;text-transform:uppercase;font-weight:600;vertical-align:top;border-right:1px solid rgba(255,255,255,.1)}
+table.tracker thead th:last-child{border-right:none}
+table.tracker thead th .en{display:block;font-family:'Playfair Display',serif;font-style:italic;font-size:.7rem;font-weight:400;color:#e8d5ce;letter-spacing:.4px;text-transform:none;margin-top:1px}
+table.tracker tbody td{padding:12px 12px;border-bottom:1px solid var(--brl);vertical-align:top;line-height:1.55;border-right:1px solid var(--brl)}
+table.tracker tbody td:last-child{border-right:none}
+table.tracker tbody tr:last-child td{border-bottom:none}
+table.tracker tbody tr.zyc{background:#fdf8f3}
+table.tracker tbody tr.fal{background:#f6f8fb}
+table.tracker tbody tr:hover td{background:rgba(193,74,59,.04)}
+table.tracker .id{font-family:'Playfair Display',serif;font-weight:700;color:var(--r);font-size:.95rem;text-align:center;width:42px}
+table.tracker .who{font-weight:600;color:var(--bl);font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;width:78px;white-space:nowrap}
+table.tracker .who.zyc{color:var(--r2)}
+table.tracker .commit{min-width:240px}
+table.tracker .commit strong{color:var(--bl);font-weight:600;display:block;margin-bottom:3px}
+table.tracker .commit .en{display:block;font-style:italic;color:var(--tl);font-size:.78rem;margin-top:3px;line-height:1.5}
+table.tracker .when{width:120px;font-size:.8rem;color:var(--bl);font-weight:600}
+table.tracker .when .en{display:block;font-style:italic;color:var(--tl);font-size:.72rem;font-weight:400;margin-top:2px}
+table.tracker .status{width:108px;text-align:center}
+table.tracker .next{min-width:200px;font-size:.8rem;color:var(--t)}
+table.tracker .next .en{display:block;color:var(--tl);font-style:italic;font-size:.74rem;margin-top:3px}
+
+/* STATUS PILLS — selectable visually */
+.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:14px;font-size:.66rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;border:1.5px solid currentColor;line-height:1;white-space:nowrap}
+.pill.pend{color:var(--pend);background:rgba(154,165,120,.1)}
+.pill.prog{color:var(--prog);background:rgba(212,148,42,.1)}
+.pill.done{color:var(--done);background:rgba(90,138,74,.12)}
+.pill.block{color:var(--block);background:rgba(193,74,59,.1)}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* OWN PENDINGS — Falhaus side */
+.own-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:14px}
+@media(max-width:760px){.own-grid{grid-template-columns:1fr}}
+.own-card{background:var(--w);border:1px solid var(--br);border-top:4px solid var(--bl);border-radius:6px;padding:22px 24px}
+section.alt .own-card{background:var(--bg)}
+.own-card.zyc{border-top-color:var(--r)}
+.own-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--bl);font-weight:700;margin-bottom:2px}
+.own-card .h3-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.84rem;color:var(--bl3);font-weight:400;margin-bottom:14px}
+.own-card.zyc h3{color:var(--r2)}
+.own-card.zyc .h3-en{color:var(--r)}
+.checklist{list-style:none;padding:0;margin:0}
+.checklist li{padding:10px 0 10px 30px;border-bottom:1px dashed var(--br);position:relative;font-size:.86rem;line-height:1.55}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{content:"";position:absolute;left:0;top:13px;width:16px;height:16px;border:2px solid var(--bl3);border-radius:3px;background:var(--w)}
+.checklist li.done::before{background:var(--done);border-color:var(--done)}
+.checklist li.done::after{content:"✓";position:absolute;left:3px;top:8px;color:var(--w);font-weight:700;font-size:.78rem;line-height:1}
+.checklist li.prog::before{background:repeating-linear-gradient(135deg,var(--prog),var(--prog) 2px,var(--w) 2px,var(--w) 5px);border-color:var(--prog)}
+.checklist li.block::before{background:var(--block);border-color:var(--block)}
+.checklist li.block::after{content:"!";position:absolute;left:5px;top:8px;color:var(--w);font-weight:700;font-size:.78rem;line-height:1}
+.own-card.zyc .checklist li::before{border-color:var(--r)}
+.checklist li strong{color:var(--bl);font-weight:600;display:block;margin-bottom:2px}
+.own-card.zyc .checklist li strong{color:var(--r2)}
+.checklist li .en{display:block;color:var(--tl);font-style:italic;font-size:.78rem;margin-top:3px;line-height:1.5}
+.checklist li.done strong,.checklist li.done .en{text-decoration:line-through;opacity:.65}
+
+/* AGENDA NEXT */
+.agenda{background:linear-gradient(135deg,var(--bl) 0%,var(--bl2) 100%);color:var(--w);padding:36px 0;position:relative}
+.agenda::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--r),transparent)}
+.agenda .sec-tag{color:#f0d3cc}
+.agenda .sec-tag .num{color:var(--w)}
+.agenda .sec-title{color:var(--w)}
+.agenda .sec-title-en{color:#e8d5ce}
+.agenda-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}
+.agenda-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-left:4px solid #f0d3cc;border-radius:0 5px 5px 0;padding:16px 18px}
+.agenda-item .when{font-size:.6rem;letter-spacing:1.8px;text-transform:uppercase;color:#f0d3cc;font-weight:700;margin-bottom:5px}
+.agenda-item h5{font-family:'Playfair Display',serif;font-size:.98rem;color:var(--w);font-weight:700;margin-bottom:3px;line-height:1.3}
+.agenda-item .en{font-family:'Playfair Display',serif;font-style:italic;font-size:.78rem;color:#d8dff0;line-height:1.4;display:block}
+
+/* FOOTER */
+footer{background:var(--bl);color:#d8dff0;padding:26px 0;text-align:center}
+footer .brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--w);font-weight:700;letter-spacing:1.2px;margin-bottom:3px}
+footer .meta{font-size:.74rem;color:#a5b1cc;margin-top:8px;line-height:1.6}
+footer .meta-en{font-size:.7rem;color:#a5b1cc;opacity:.7;font-style:italic;margin-top:3px}
+footer .ver{display:inline-block;margin-top:10px;padding:3px 10px;border:1px solid rgba(255,255,255,.2);border-radius:12px;font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;color:#f0d3cc}
+
+/* PRINT */
+@media print{
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  body{font-size:11px}
+  section{page-break-inside:avoid;padding:18px 0}
+  .topic,.own-card,.agenda-item,table.tracker tr{break-inside:avoid}
+  .legend{position:static}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Falhaus × ZYC · Working Checklist · Bilateral Tracking</div>
+    <h1>Seguimiento de la <em>agenda Falhaus × ZYC</em></h1>
+    <div class="h1-en">Falhaus × ZYC bilateral agenda — operational tracking</div>
+    <div class="hero-meta">
+      <div class="item"><div class="lbl">Origen · Source</div><div class="val">Reunión 30 abril 2026<small>Meeting April 30, 2026</small></div></div>
+      <div class="item"><div class="lbl">Uso · Purpose</div><div class="val">Tracking bilateral<small>Bilateral tracking</small></div></div>
+      <div class="item"><div class="lbl">Última actualización · Last updated</div><div class="val">7 mayo 2026<small>May 7, 2026</small></div></div>
+      <div class="item"><div class="lbl">Próxima revisión · Next review</div><div class="val">A definir<small>To be defined</small></div></div>
+    </div>
+  </div>
+</header>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="container">
+    <div class="legend-inner">
+      <strong>Estados / Status</strong>
+      <span class="lg pend"><span class="chip"></span> Pendiente / Pending</span>
+      <span class="lg prog"><span class="chip"></span> En curso / In progress</span>
+      <span class="lg done"><span class="chip"></span> Completado / Completed</span>
+      <span class="lg block"><span class="chip"></span> Bloqueado / Blocked</span>
+    </div>
+  </div>
+</div>
+
+<!-- A. TOPICS DISCUSSED -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag"><span class="num">A</span><span>Temas conversados · Topics discussed</span></div>
+      <h2 class="sec-title">Resumen de los temas tratados en la reunión</h2>
+      <div class="sec-title-en">Summary of topics covered in the meeting</div>
+    </div>
+    <div class="topics">
+      <div class="topic">
+        <span class="num">01</span><h4>Refuerzo del proceso de calidad conjunto<span class="en">Strengthening the joint quality process</span></h4>
+        <p>Ambas partes acordaron reforzar la coordinación de fábrica sobre verificación de pedidos y embalaje. ZYC ratifica su compromiso con la mejora continua.<span class="en">Both parties agreed to strengthen factory coordination on order verification and packaging. ZYC reaffirms its commitment to continuous improvement.</span></p>
+      </div>
+      <div class="topic">
+        <span class="num">02</span><h4>Adecuación eléctrica conjunta<span class="en">Joint electrical adaptation</span></h4>
+        <p>Ambas partes alinearon especificaciones eléctricas para futuras entregas. ZYC, en gesto de cooperación, aporta USD 350 a la adecuación realizada.<span class="en">Both parties aligned electrical specifications for future deliveries. ZYC, as a gesture of cooperation, contributes USD 350 toward the adaptation completed.</span></p>
+      </div>
+      <div class="topic">
+        <span class="num">03</span><h4>Posicionamiento de Falhaus en Argentina<span class="en">Falhaus positioning in Argentina</span></h4>
+        <p>+20.000 personas en comunidad, ~8.000 contactados, 400 potenciales activos, 10% de cierre, presencia en 4 de 24 provincias.<span class="en">+20,000 community, ~8,000 contacted, 400 active prospects, 10% conversion, presence in 4 of 24 provinces.</span></p>
+      </div>
+      <div class="topic">
+        <span class="num">04</span><h4>Representación exclusiva en Argentina<span class="en">Exclusive representation in Argentina</span></h4>
+        <p>Sr. Gao confirma viabilidad. Modelo Corea de referencia (cuota + venta mínima + sin margen extra + servicios locales). ZYC envía propuesta escrita.<span class="en">Mr. Gao confirms viability. Korea model as reference (fee + minimum sales + no extra margin + local services). ZYC will send a written proposal.</span></p>
+      </div>
+      <div class="topic">
+        <span class="num">05</span><h4>Apple Cabin para showroom<span class="en">Apple Cabin for showroom</span></h4>
+        <p>Falhaus solicita unidad 20 pies (~13 m²) sin cargo. Sr. Gao acepta. Espera especificación técnica de Falhaus.<span class="en">Falhaus requests one 20-ft unit (~13 m²) free of charge. Mr. Gao accepts. Awaiting Falhaus technical spec.</span></p>
+      </div>
+      <div class="topic">
+        <span class="num">06</span><h4>Esquema flexible para operaciones selectivas<span class="en">Flexible scheme for selective operations</span></h4>
+        <p>Ambas partes exploran un esquema flexible de pago para operaciones puntuales. Sr. Gao confirma viabilidad; el porcentaje será definido en próxima conversación.<span class="en">Both parties are exploring a flexible payment scheme for selective operations. Mr. Gao confirms viability; the percentage will be agreed in the next conversation.</span></p>
+      </div>
+      <div class="topic">
+        <span class="num">07</span><h4>Visita del equipo ZYC a Argentina<span class="en">ZYC team visit to Argentina</span></h4>
+        <p>Sr. Gao (o Sr. Cao o un colega) viajará a Argentina. Gestión arranca post-Día del Trabajador. Recorrida incluye Neuquén — Vaca Muerta.<span class="en">Mr. Gao (or Mr. Cao or a colleague) will travel. Process starts after Workers' Day. Tour includes Neuquén — Vaca Muerta.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B. COMMITMENTS TRACKER -->
+<section class="alt">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag"><span class="num">B</span><span>Compromisos accionables · Actionable commitments</span></div>
+      <h2 class="sec-title">Tracker de compromisos asumidos</h2>
+      <div class="sec-title-en">Tracker of committed actions</div>
+    </div>
+    <div class="table-wrap">
+      <table class="tracker">
+        <thead>
+          <tr>
+            <th class="id">#</th>
+            <th class="who">Parte<div class="en">Party</div></th>
+            <th class="commit">Compromiso<div class="en">Commitment</div></th>
+            <th class="when">Plazo<div class="en">Deadline</div></th>
+            <th class="status">Estado<div class="en">Status</div></th>
+            <th class="next">Próximo paso<div class="en">Next step</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="zyc">
+            <td class="id">01</td>
+            <td class="who zyc">ZYC</td>
+            <td class="commit"><strong>Envío de módulo Z con calidad reforzada, sin cargo</strong>Gesto de ZYC para fortalecer la cooperación bilateral, vinculado a una entrega previa.<span class="en">A ZYC gesture to strengthen the bilateral cooperation, linked to a previous delivery.</span></td>
+            <td class="when">A definir<div class="en">TBD</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Confirmar fecha estimada de embarque.<span class="en">Confirm estimated shipping date.</span></td>
+          </tr>
+          <tr class="zyc">
+            <td class="id">02</td>
+            <td class="who zyc">ZYC</td>
+            <td class="commit"><strong>Aporte de USD 350 — adecuación eléctrica</strong>Aporte de ZYC a la adecuación eléctrica realizada, en el marco de la cooperación a largo plazo.<span class="en">ZYC contribution toward the electrical adaptation completed, within the long-term cooperation framework.</span></td>
+            <td class="when">A coordinar<div class="en">To coordinate</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Coordinar mecanismo de aplicación del aporte en próxima operación.<span class="en">Coordinate mechanism for applying the contribution in the next operation.</span></td>
+          </tr>
+          <tr class="zyc">
+            <td class="id">03</td>
+            <td class="who zyc">ZYC</td>
+            <td class="commit"><strong>Envío del Apple Cabin (20 pies / ~13 m²) para showroom</strong>Préstamo sin cargo de unidad para exhibición en Argentina.<span class="en">Free-of-charge loan unit for display in Argentina.</span></td>
+            <td class="when">Tras spec técnica<div class="en">After tech spec</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Esperar especificación técnica de Falhaus para coordinar fábrica.<span class="en">Await Falhaus technical spec to coordinate factory.</span></td>
+          </tr>
+          <tr class="zyc">
+            <td class="id">04</td>
+            <td class="who zyc">ZYC</td>
+            <td class="commit"><strong>Propuesta escrita de representación exclusiva</strong>Términos detallados: cuota, venta mínima anual, servicios y condiciones.<span class="en">Detailed terms: fee, annual minimum sales, services and conditions.</span></td>
+            <td class="when">Próximas semanas<div class="en">Coming weeks</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">ZYC redacta y envía a Falhaus para revisión.<span class="en">ZYC drafts and sends to Falhaus for review.</span></td>
+          </tr>
+          <tr class="zyc">
+            <td class="id">05</td>
+            <td class="who zyc">ZYC</td>
+            <td class="commit"><strong>Definición del porcentaje del esquema de financiamiento puntual</strong>Para operaciones selectivas con productos de menor envergadura.<span class="en">For selective operations with smaller products.</span></td>
+            <td class="when">A definir<div class="en">TBD</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Acordar porcentaje en próxima conversación bilateral.<span class="en">Agree percentage in next bilateral conversation.</span></td>
+          </tr>
+          <tr class="zyc">
+            <td class="id">06</td>
+            <td class="who zyc">ZYC</td>
+            <td class="commit"><strong>Planificación de la visita a Argentina</strong>Sr. Gao o colega del equipo. Gestión de visa, agenda y logística.<span class="en">Mr. Gao or team colleague. Visa, agenda and logistics.</span></td>
+            <td class="when">Post 1 mayo<div class="en">After May 1</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">ZYC inicia gestiones y comparte fechas tentativas.<span class="en">ZYC starts arrangements and shares tentative dates.</span></td>
+          </tr>
+          <tr class="zyc">
+            <td class="id">07</td>
+            <td class="who zyc">ZYC</td>
+            <td class="commit"><strong>Profundización de procesos de control compartido</strong>Compromiso conjunto ratificado por el Sr. Gao para fortalecer la calidad en futuras entregas.<span class="en">Joint commitment ratified by Mr. Gao to strengthen quality in future deliveries.</span></td>
+            <td class="when">Continuo<div class="en">Ongoing</div></td>
+            <td class="status"><span class="pill prog"><span class="dot"></span>En curso</span></td>
+            <td class="next">Acompañar y celebrar las mejoras implementadas en próximas entregas.<span class="en">Accompany and celebrate the improvements implemented in upcoming deliveries.</span></td>
+          </tr>
+          <tr class="fal">
+            <td class="id">08</td>
+            <td class="who">FALHAUS</td>
+            <td class="commit"><strong>Envío de la especificación técnica del Apple Cabin</strong>Documento técnico para que ZYC coordine con la fábrica.<span class="en">Technical document for ZYC to coordinate with the factory.</span></td>
+            <td class="when">Inmediato<div class="en">Immediate</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Preparar y enviar a Nancy / Sr. Gao.<span class="en">Prepare and send to Nancy / Mr. Gao.</span></td>
+          </tr>
+          <tr class="fal">
+            <td class="id">09</td>
+            <td class="who">FALHAUS</td>
+            <td class="commit"><strong>Revisión de la propuesta escrita de representación exclusiva</strong>Análisis de cuota, venta mínima, condiciones y respuesta formal.<span class="en">Analysis of fee, minimum sales, conditions and formal response.</span></td>
+            <td class="when">Al recibir<div class="en">Upon receipt</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Esperar propuesta de ZYC para revisión interna.<span class="en">Await ZYC proposal for internal review.</span></td>
+          </tr>
+          <tr class="fal">
+            <td class="id">10</td>
+            <td class="who">FALHAUS</td>
+            <td class="commit"><strong>Recepción y acompañamiento del equipo ZYC en Argentina</strong>Recorrida por puntos comerciales del país. Clave: Neuquén – Vaca Muerta.<span class="en">Tour of commercial points in the country. Key stop: Neuquén – Vaca Muerta.</span></td>
+            <td class="when">Cuando ZYC viaje<div class="en">Upon ZYC visit</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Armar agenda de visita al recibir confirmación de fechas.<span class="en">Build visit agenda upon receiving date confirmation.</span></td>
+          </tr>
+          <tr class="fal">
+            <td class="id">11</td>
+            <td class="who">FALHAUS</td>
+            <td class="commit"><strong>Continuidad de la política de precios competitivos en Argentina</strong>Alineada con el posicionamiento comercial de ZYC.<span class="en">Aligned with ZYC's commercial positioning.</span></td>
+            <td class="when">Continuo<div class="en">Ongoing</div></td>
+            <td class="status"><span class="pill prog"><span class="dot"></span>En curso</span></td>
+            <td class="next">Mantener vigente y revisar trimestralmente.<span class="en">Keep active and review quarterly.</span></td>
+          </tr>
+          <tr class="fal">
+            <td class="id">12</td>
+            <td class="who">FALHAUS</td>
+            <td class="commit"><strong>Centralización exclusiva de las consultas argentinas</strong>Activable al firmar el acuerdo de representación.<span class="en">Activatable upon signing the representation agreement.</span></td>
+            <td class="when">Tras acuerdo<div class="en">After agreement</div></td>
+            <td class="status"><span class="pill pend"><span class="dot"></span>Pendiente</span></td>
+            <td class="next">Definir mecanismo de derivación al firmar contrato.<span class="en">Define referral mechanism upon contract signing.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- C + D. OWN PENDINGS -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag"><span class="num">C</span><span>Vista por parte · Side-by-side view</span></div>
+      <h2 class="sec-title">Lo que cada parte tiene que hacer</h2>
+      <div class="sec-title-en">Action items by party</div>
+    </div>
+    <div class="own-grid">
+      <div class="own-card">
+        <h3>Mis pendientes (Falhaus)</h3>
+        <div class="h3-en">Falhaus action items</div>
+        <ul class="checklist">
+          <li><strong>Enviar especificación técnica del Apple Cabin</strong><span class="en">Send Apple Cabin technical specification</span></li>
+          <li><strong>Revisar propuesta escrita de representación cuando llegue</strong><span class="en">Review written representation proposal upon arrival</span></li>
+          <li><strong>Definir agenda de visita para el equipo ZYC</strong><span class="en">Define visit agenda for the ZYC team</span></li>
+          <li><strong>Confirmar destinos de la recorrida (incluir Neuquén – Vaca Muerta)</strong><span class="en">Confirm tour destinations (include Neuquén – Vaca Muerta)</span></li>
+          <li><strong>Mantener política de precios competitivos en Argentina</strong><span class="en">Maintain competitive pricing policy in Argentina</span></li>
+          <li><strong>Preparar mecanismo de centralización de consultas (al firmar)</strong><span class="en">Prepare referral centralization mechanism (upon signing)</span></li>
+        </ul>
+      </div>
+      <div class="own-card zyc">
+        <h3>Esperando de ZYC</h3>
+        <div class="h3-en">Awaiting from ZYC</div>
+        <ul class="checklist">
+          <li><strong>Confirmación de embarque del módulo Z con calidad reforzada</strong><span class="en">Shipping confirmation for the improved-quality Z module</span></li>
+          <li><strong>Confirmación del mecanismo para aplicar el aporte de USD 350 acordado</strong><span class="en">Confirmation of mechanism to apply the agreed USD 350 contribution</span></li>
+          <li><strong>Coordinación de envío del Apple Cabin tras recibir spec técnica</strong><span class="en">Apple Cabin shipping coordination after receiving technical spec</span></li>
+          <li><strong>Propuesta escrita de representación exclusiva</strong><span class="en">Written exclusive representation proposal</span></li>
+          <li><strong>Definición del porcentaje del esquema de financiamiento puntual</strong><span class="en">Definition of the selective financing percentage</span></li>
+          <li><strong>Fechas tentativas de visita a Argentina</strong><span class="en">Tentative visit dates to Argentina</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA NEXT -->
+<section class="agenda">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag"><span class="num">D</span><span>Próxima conversación · Next conversation</span></div>
+      <h2 class="sec-title">Puntos a llevar a la próxima reunión bilateral</h2>
+      <div class="sec-title-en">Topics for the next bilateral meeting</div>
+    </div>
+    <div class="agenda-grid">
+      <div class="agenda-item">
+        <div class="when">01</div>
+        <h5>Estado del envío del módulo Z con calidad reforzada</h5>
+        <span class="en">Status of the improved-quality Z module shipment</span>
+      </div>
+      <div class="agenda-item">
+        <div class="when">02</div>
+        <h5>Confirmación del Apple Cabin tras envío de spec</h5>
+        <span class="en">Apple Cabin confirmation after spec submission</span>
+      </div>
+      <div class="agenda-item">
+        <div class="when">03</div>
+        <h5>Discusión del porcentaje de financiamiento puntual</h5>
+        <span class="en">Discussion of the selective financing percentage</span>
+      </div>
+      <div class="agenda-item">
+        <div class="when">04</div>
+        <h5>Revisión de la propuesta escrita de representación exclusiva</h5>
+        <span class="en">Review of the written exclusive representation proposal</span>
+      </div>
+      <div class="agenda-item">
+        <div class="when">05</div>
+        <h5>Fechas tentativas de visita a Argentina</h5>
+        <span class="en">Tentative dates of the Argentina visit</span>
+      </div>
+      <div class="agenda-item">
+        <div class="when">06</div>
+        <h5>Mejoras observadas en las entregas conjuntas</h5>
+        <span class="en">Observed improvements in joint deliveries</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="brand">FALHAUS × ZYC</div>
+    <div class="ver">v.1 · 7 may 2026</div>
+    <div class="meta">Documento operativo de seguimiento bilateral · Falhaus &amp; ZYC</div>
+    <div class="meta-en">Operational bilateral tracking document · Falhaus &amp; ZYC</div>
+  </div>
+</footer>
+
+</body>
+</html>
