@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Falhaus — Vivienda Modular 36m² · Legajo Técnico Tierra del Fuego</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --falhaus-blue: #2C348D;
+  --falhaus-blue-dark: #1F2666;
+  --falhaus-blue-light: #E8E9F4;
+  --gray-50: #F5F5F7;
+  --gray-100: #EAEAEC;
+  --gray-200: #D4D4D8;
+  --gray-500: #71717A;
+  --gray-700: #3F3F46;
+  --gray-900: #18181B;
+  --text-primary: #18181B;
+  --text-secondary: #52525B;
+  --bg-page: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text-primary); background: var(--gray-100); }
+
+.page {
+  width: 297mm;
+  min-height: 210mm;
+  margin: 20px auto;
+  background: var(--bg-page);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  page-break-after: always;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12mm 15mm 8mm 15mm;
+  border-bottom: 1px solid var(--gray-100);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-brand .iso {
+  width: 32px;
+  height: 38px;
+}
+.header-brand .wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--falhaus-blue);
+  letter-spacing: -0.5px;
+}
+.header-meta {
+  text-align: right;
+  font-size: 9px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.header-meta strong {
+  color: var(--falhaus-blue);
+  font-weight: 600;
+}
+
+/* ===== TÍTULO PIEZA ===== */
+.piece-title {
+  padding: 6mm 15mm 4mm 15mm;
+}
+.piece-number {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.piece-name {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--falhaus-blue);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.piece-subtitle {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* ===== CUERPO ===== */
+.body {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 10mm;
+  padding: 4mm 15mm 10mm 15mm;
+}
+.image-block {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130mm;
+}
+.image-block img {
+  max-width: 100%;
+  max-height: 130mm;
+  display: block;
+}
+
+/* ===== INFO PANEL ===== */
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6mm;
+}
+.info-section {
+  border-left: 2px solid var(--falhaus-blue);
+  padding-left: 10px;
+}
+.info-section-title {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--falhaus-blue);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.info-list {
+  list-style: none;
+}
+.info-list li {
+  font-size: 11px;
+  color: var(--text-primary);
+  padding: 3px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px dotted var(--gray-100);
+}
+.info-list li:last-child { border-bottom: none; }
+.info-list .label {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+.info-list .value {
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6mm 15mm;
+  border-top: 1px solid var(--gray-100);
+  background: var(--bg-page);
+}
+.footer-left {
+  display: flex;
+  gap: 24px;
+  font-size: 9px;
+  color: var(--text-secondary);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.footer-left .item strong {
+  color: var(--falhaus-blue);
+  font-weight: 600;
+}
+.footer-right {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--falhaus-blue);
+}
+
+/* ===== NOTA AL PIE DE PIEZA ===== */
+.piece-note {
+  padding: 0 15mm 4mm 15mm;
+  font-size: 9px;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.5;
+}
+.piece-note strong {
+  color: var(--falhaus-blue);
+  font-style: normal;
+  font-weight: 600;
+}
+.value sup {
+  color: var(--falhaus-blue);
+  font-weight: 700;
+}
+
+/* ===== PORTADA ===== */
+.cover {
+  background: var(--falhaus-blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25mm;
+  min-height: 210mm;
+}
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cover-iso {
+  width: 56px;
+  height: 68px;
+  filter: brightness(0) invert(1);
+}
+.cover-meta {
+  text-align: right;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+.cover-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cover-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+.cover-subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 480px;
+  opacity: 0.85;
+  font-weight: 300;
+}
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 20mm;
+}
+.cover-tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  opacity: 0.85;
+}
+.cover-recipient {
+  text-align: right;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+/* ===== ÍNDICE PIEZAS ===== */
+.toc {
+  padding: 15mm 25mm;
+}
+.toc-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 36px;
+  color: var(--falhaus-blue);
+  margin-bottom: 20mm;
+  font-weight: 500;
+}
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8mm;
+}
+.toc-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 60px;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-100);
+  align-items: center;
+}
+.toc-number {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--falhaus-blue);
+}
+.toc-content .toc-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.toc-content .toc-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+.toc-page {
+  text-align: right;
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============== PORTADA ============== -->
+<div class="page cover">
+  <div class="cover-top">
+    <img src="assets/logo-iso.png" class="cover-iso" alt="Falhaus">
+    <div class="cover-meta">
+      Mayo 2026<br>
+      Legajo técnico
+    </div>
+  </div>
+  <div class="cover-center">
+    <div class="cover-eyebrow">Vivienda modular 36 m²</div>
+    <h1 class="cover-title">Una solución habitacional<br>para Tierra del Fuego.</h1>
+    <p class="cover-subtitle">
+      Propuesta técnica para desarrollo habitacional de gran escala.
+      Módulo de 6 × 6 metros, listo para clima extremo, instalable en 48 horas.
+      Diseñado para integrarse al territorio fueguino con calidad constructiva y vida digna.
+    </p>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-tagline">Lo tuyo merece lugar.</div>
+    <div class="cover-recipient">
+      Preparado para<br>
+      <strong style="font-size:13px;letter-spacing:0.5px;">Gobierno de Tierra del Fuego</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ============== ÍNDICE ============== -->
+<div class="page">
+  <div class="header">
+    <div class="header-brand">
+      <img src="assets/logo-iso.png" class="iso" alt="">
+      <span class="wordmark">Falhaus</span>
+    </div>
+    <div class="header-meta">
+      Legajo técnico — Mayo 2026<br>
+      <strong>Vivienda modular 36 m²</strong>
+    </div>
+  </div>
+  <div class="toc">
+    <h2 class="toc-title">Contenido del legajo</h2>
+    <ul class="toc-list">
+      <li class="toc-item">
+        <div class="toc-number">01</div>
+        <div class="toc-content">
+          <div class="toc-name">Vista axonométrica con interior</div>
+          <div class="toc-desc">Perspectiva 3/4 del módulo mostrando distribución interior, ambientes y circulación.</div>
+        </div>
+        <div class="toc-page">P. 03</div>
+      </li>
+      <li class="toc-item">
+        <div class="toc-number">02</div>
+        <div class="toc-content">
+          <div class="toc-name">Alzado frontal</div>
+          <div class="toc-desc">Vista del frente principal con acceso, aberturas y proporciones generales.</div>
+        </div>
+        <div class="toc-page">P. 04</div>
+      </li>
+      <li class="toc-item">
+        <div class="toc-number">03</div>
+        <div class="toc-content">
+          <div class="toc-name">Alzado posterior y lateral</div>
+          <div class="toc-desc">Vista trasera mostrando techo a dos aguas, aberturas secundarias y ventilación.</div>
+        </div>
+        <div class="toc-page">P. 05</div>
+      </li>
+      <li class="toc-item">
+        <div class="toc-number">04</div>
+        <div class="toc-content">
+          <div class="toc-name">Planta de distribución</div>
+          <div class="toc-desc">Vista cenital con distribución de ambientes, m² por uso y circulación interior.</div>
+        </div>
+        <div class="toc-page">P. 06</div>
+      </li>
+      <li class="toc-item">
+        <div class="toc-number">05</div>
+        <div class="toc-content">
+          <div class="toc-name">Ficha técnica y especificaciones</div>
+          <div class="toc-desc">Materiales, dimensiones generales, prestaciones para clima fueguino, transporte e instalación.</div>
+        </div>
+        <div class="toc-page">P. 07</div>
+      </li>
+      <li class="toc-item">
+        <div class="toc-number">06</div>
+        <div class="toc-content">
+          <div class="toc-name">Visualización en contexto</div>
+          <div class="toc-desc">Renderizado de la unidad instalada en paisaje fueguino y desarrollo habitacional a escala.</div>
+        </div>
+        <div class="toc-page">P. 08</div>
+      </li>
+    </ul>
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="item"><strong>P. 02</strong></div>
+      <div class="item">Falhaus · Vivienda modular 36 m²</div>
+    </div>
+    <div class="footer-right">Lo tuyo merece lugar.</div>
+  </div>
+</div>
+
+<!-- ============== PIEZA 01 — Axonométrica con interior ============== -->
+<div class="page">
+  <div class="header">
+    <div class="header-brand">
+      <img src="assets/logo-iso.png" class="iso" alt="">
+      <span class="wordmark">Falhaus</span>
+    </div>
+    <div class="header-meta">
+      Pieza 01 / 06 — Escala referencial<br>
+      <strong>Vivienda modular 36 m²</strong>
+    </div>
+  </div>
+  <div class="piece-title">
+    <div class="piece-number">01 — Vista axonométrica</div>
+    <h2 class="piece-name">Perspectiva con interior visible</h2>
+    <p class="piece-subtitle">Distribución de ambientes y volumen general del módulo</p>
+  </div>
+  <div class="body">
+    <div class="image-block">
+      <img src="assets/01-axonometrica-interior-final.jpg" alt="Vista axonométrica con interior">
+    </div>
+    <div class="info-panel">
+      <div class="info-section">
+        <div class="info-section-title">Dimensiones generales</div>
+        <ul class="info-list">
+          <li><span class="label">Frente</span><span class="value">6,00 m</span></li>
+          <li><span class="label">Profundidad</span><span class="value">6,00 m</span></li>
+          <li><span class="label">Superficie cubierta</span><span class="value">36,00 m²</span></li>
+          <li><span class="label">Altura al alero</span><span class="value">2,40 m<sup>*</sup></span></li>
+          <li><span class="label">Altura a cumbrera</span><span class="value">4,20 m<sup>*</sup></span></li>
+          <li><span class="label">Pendiente de techo</span><span class="value">30°</span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Composición del módulo</div>
+        <ul class="info-list">
+          <li><span class="label">Cantidad de unidades</span><span class="value">2 módulos unidos</span></li>
+          <li><span class="label">Dimensión por unidad</span><span class="value">3,00 × 6,00 m</span></li>
+          <li><span class="label">Sistema constructivo</span><span class="value">Prefabricado modular</span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Ambientes</div>
+        <ul class="info-list">
+          <li><span class="label">Dormitorio</span><span class="value">1 unidad</span></li>
+          <li><span class="label">Living</span><span class="value">1 unidad</span></li>
+          <li><span class="label">Cocina</span><span class="value">1 unidad</span></li>
+          <li><span class="label">Baño completo</span><span class="value">1 unidad</span></li>
+          <li><span class="label">Circulación</span><span class="value">Hall central</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="piece-note">
+    <strong>*</strong> Datos a confirmar con fabricante. La distribución mostrada es una configuración de referencia y puede adaptarse según necesidades del proyecto.
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="item"><strong>P. 03</strong></div>
+      <div class="item">Vista axonométrica · Pieza 01</div>
+      <div class="item">Emisión 05·2026</div>
+    </div>
+    <div class="footer-right">Falhaus</div>
+  </div>
+</div>
+
+<!-- ============== PIEZA 02 — Alzado frontal ============== -->
+<div class="page">
+  <div class="header">
+    <div class="header-brand">
+      <img src="assets/logo-iso.png" class="iso" alt="">
+      <span class="wordmark">Falhaus</span>
+    </div>
+    <div class="header-meta">
+      Pieza 02 / 06 — Escala referencial<br>
+      <strong>Vivienda modular 36 m²</strong>
+    </div>
+  </div>
+  <div class="piece-title">
+    <div class="piece-number">02 — Alzado frontal</div>
+    <h2 class="piece-name">Vista del acceso principal</h2>
+    <p class="piece-subtitle">Puerta de entrada, aberturas frontales y composición de fachada</p>
+  </div>
+  <div class="body">
+    <div class="image-block">
+      <img src="assets/02-frontal-exterior-final.jpg" alt="Alzado frontal">
+    </div>
+    <div class="info-panel">
+      <div class="info-section">
+        <div class="info-section-title">Fachada principal</div>
+        <ul class="info-list">
+          <li><span class="label">Acceso principal</span><span class="value">Puerta doble blanca</span></li>
+          <li><span class="label">Aberturas frontales</span><span class="value">1 ventana</span></li>
+          <li><span class="label">Aberturas laterales visibles</span><span class="value">2 ventanas</span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Materialidad exterior</div>
+        <ul class="info-list">
+          <li><span class="label">Revestimiento</span><span class="value">Paneles metálicos verticales</span></li>
+          <li><span class="label">Color exterior</span><span class="value">Gris antracita</span></li>
+          <li><span class="label">Techo</span><span class="value">Chapa a dos aguas</span></li>
+          <li><span class="label">Aberturas</span><span class="value">Marco blanco</span></li>
+          <li><span class="label">Vidriado</span><span class="value">Doble vidrio<sup>*</sup></span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Adaptaciones clima frío</div>
+        <ul class="info-list">
+          <li><span class="label">Aislación térmica</span><span class="value">Paneles con aislante<sup>*</sup></span></li>
+          <li><span class="label">Pendiente para nieve</span><span class="value">30° resuelto</span></li>
+          <li><span class="label">Carpinterías</span><span class="value">Cierre hermético<sup>*</sup></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="piece-note">
+    <strong>*</strong> Especificaciones a confirmar con fabricante. El conteo de aberturas refleja lo visible en la imagen; el total puede variar según configuración.
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="item"><strong>P. 04</strong></div>
+      <div class="item">Alzado frontal · Pieza 02</div>
+      <div class="item">Emisión 05·2026</div>
+    </div>
+    <div class="footer-right">Falhaus</div>
+  </div>
+</div>
+
+<!-- ============== PIEZA 03 — Alzado posterior/lateral ============== -->
+<div class="page">
+  <div class="header">
+    <div class="header-brand">
+      <img src="assets/logo-iso.png" class="iso" alt="">
+      <span class="wordmark">Falhaus</span>
+    </div>
+    <div class="header-meta">
+      Pieza 03 / 06 — Escala referencial<br>
+      <strong>Vivienda modular 36 m²</strong>
+    </div>
+  </div>
+  <div class="piece-title">
+    <div class="piece-number">03 — Alzado posterior y lateral</div>
+    <h2 class="piece-name">Vista del techo y aberturas secundarias</h2>
+    <p class="piece-subtitle">Resolución constructiva del techo a dos aguas y aberturas posteriores</p>
+  </div>
+  <div class="body">
+    <div class="image-block">
+      <img src="assets/03-lateral-trasera-final.jpg" alt="Alzado posterior y lateral">
+    </div>
+    <div class="info-panel">
+      <div class="info-section">
+        <div class="info-section-title">Cubierta</div>
+        <ul class="info-list">
+          <li><span class="label">Tipo</span><span class="value">Techo a dos aguas</span></li>
+          <li><span class="label">Pendiente</span><span class="value">30°</span></li>
+          <li><span class="label">Material</span><span class="value">Chapa metálica</span></li>
+          <li><span class="label">Color</span><span class="value">Antracita oscuro</span></li>
+          <li><span class="label">Carga admisible</span><span class="value">A definir<sup>*</sup></span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Fachadas laterales</div>
+        <ul class="info-list">
+          <li><span class="label">Ventana lateral grande</span><span class="value">Living</span></li>
+          <li><span class="label">Ventana lateral chica</span><span class="value">Baño</span></li>
+          <li><span class="label">Frontón posterior</span><span class="value">Macizo</span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Detalle constructivo</div>
+        <ul class="info-list">
+          <li><span class="label">Unión de módulos</span><span class="value">Junta vertical visible</span></li>
+          <li><span class="label">Esquinas</span><span class="value">Refuerzo estructural</span></li>
+          <li><span class="label">Base apoyo</span><span class="value">Platea hormigón</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="piece-note">
+    <strong>*</strong> Capacidad de carga admisible del techo y certificación para zona de nieve a confirmar con fabricante.
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="item"><strong>P. 05</strong></div>
+      <div class="item">Alzado posterior · Pieza 03</div>
+      <div class="item">Emisión 05·2026</div>
+    </div>
+    <div class="footer-right">Falhaus</div>
+  </div>
+</div>
+
+<!-- ============== PIEZA 04 — Planta cenital ============== -->
+<div class="page">
+  <div class="header">
+    <div class="header-brand">
+      <img src="assets/logo-iso.png" class="iso" alt="">
+      <span class="wordmark">Falhaus</span>
+    </div>
+    <div class="header-meta">
+      Pieza 04 / 06 — Escala referencial<br>
+      <strong>Vivienda modular 36 m²</strong>
+    </div>
+  </div>
+  <div class="piece-title">
+    <div class="piece-number">04 — Planta de distribución</div>
+    <h2 class="piece-name">Vista cenital del módulo</h2>
+    <p class="piece-subtitle">Configuración de referencia · Distribución adaptable según necesidades del proyecto</p>
+  </div>
+  <div class="body">
+    <div class="image-block">
+      <img src="assets/04-planta-cenital-final.jpg" alt="Planta de distribución">
+    </div>
+    <div class="info-panel">
+      <div class="info-section">
+        <div class="info-section-title">Distribución de referencia</div>
+        <ul class="info-list">
+          <li><span class="label">Dormitorio</span><span class="value">~ 11 m²<sup>*</sup></span></li>
+          <li><span class="label">Living</span><span class="value">~ 11 m²<sup>*</sup></span></li>
+          <li><span class="label">Cocina</span><span class="value">~ 8 m²<sup>*</sup></span></li>
+          <li><span class="label">Baño completo</span><span class="value">~ 3 m²<sup>*</sup></span></li>
+          <li><span class="label">Circulación / muros</span><span class="value">~ 3 m²<sup>*</sup></span></li>
+          <li><span class="label">Total</span><span class="value"><strong>36,00 m²</strong></span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Equipamiento incluido</div>
+        <ul class="info-list">
+          <li><span class="label">Bacha de cocina</span><span class="value">Sí</span></li>
+          <li><span class="label">Mesada de cocina</span><span class="value">Sí</span></li>
+          <li><span class="label">Inodoro y lavatorio</span><span class="value">Sí</span></li>
+          <li><span class="label">Ducha</span><span class="value">Sí</span></li>
+          <li><span class="label">Piso interior</span><span class="value">Símil madera</span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Aberturas interiores</div>
+        <ul class="info-list">
+          <li><span class="label">Puertas internas</span><span class="value">3 unidades</span></li>
+          <li><span class="label">Puerta acceso</span><span class="value">Doble hoja</span></li>
+          <li><span class="label">Layout</span><span class="value">Adaptable</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="piece-note">
+    <strong>*</strong> Superficies estimadas a partir de proporciones visibles. La distribución mostrada es una configuración de referencia y puede adaptarse a otros usos (vivienda unifamiliar, oficina, hospedaje, etc.) según necesidades del proyecto.
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="item"><strong>P. 06</strong></div>
+      <div class="item">Planta de distribución · Pieza 04</div>
+      <div class="item">Emisión 05·2026</div>
+    </div>
+    <div class="footer-right">Falhaus</div>
+  </div>
+</div>
+
+<!-- ============== PIEZA 05 — Ficha técnica completa ============== -->
+<div class="page">
+  <div class="header">
+    <div class="header-brand">
+      <img src="assets/logo-iso.png" class="iso" alt="">
+      <span class="wordmark">Falhaus</span>
+    </div>
+    <div class="header-meta">
+      Pieza 05 / 06 — Especificaciones<br>
+      <strong>Vivienda modular 36 m²</strong>
+    </div>
+  </div>
+  <div class="piece-title">
+    <div class="piece-number">05 — Ficha técnica</div>
+    <h2 class="piece-name">Especificaciones generales</h2>
+    <p class="piece-subtitle">Datos constructivos, transporte, instalación y prestaciones</p>
+  </div>
+  <div class="body" style="grid-template-columns: 1fr 1fr;">
+    <div class="info-panel">
+      <div class="info-section">
+        <div class="info-section-title">Dimensiones y volumen</div>
+        <ul class="info-list">
+          <li><span class="label">Superficie cubierta</span><span class="value">36,00 m²</span></li>
+          <li><span class="label">Frente × Profundidad</span><span class="value">6,00 × 6,00 m</span></li>
+          <li><span class="label">Altura al alero</span><span class="value">2,40 m<sup>*</sup></span></li>
+          <li><span class="label">Altura a cumbrera</span><span class="value">4,20 m<sup>*</sup></span></li>
+          <li><span class="label">Volumen total</span><span class="value">~ 119 m³<sup>*</sup></span></li>
+          <li><span class="label">Peso aproximado</span><span class="value">A confirmar<sup>*</sup></span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Estructura</div>
+        <ul class="info-list">
+          <li><span class="label">Sistema</span><span class="value">Modular prefabricado</span></li>
+          <li><span class="label">Composición</span><span class="value">2 módulos unidos</span></li>
+          <li><span class="label">Esqueleto</span><span class="value">Estructura metálica<sup>*</sup></span></li>
+          <li><span class="label">Revestimiento</span><span class="value">Paneles metálicos</span></li>
+          <li><span class="label">Aislación</span><span class="value">A confirmar<sup>*</sup></span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Adaptaciones clima frío</div>
+        <ul class="info-list">
+          <li><span class="label">Pendiente para nieve</span><span class="value">30° resuelto</span></li>
+          <li><span class="label">Vidriado</span><span class="value">Doble vidrio<sup>*</sup></span></li>
+          <li><span class="label">Carpinterías</span><span class="value">Cierre hermético<sup>*</sup></span></li>
+          <li><span class="label">Aislación termo-acústica</span><span class="value">A confirmar<sup>*</sup></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="info-panel">
+      <div class="info-section">
+        <div class="info-section-title">Transporte e instalación</div>
+        <ul class="info-list">
+          <li><span class="label">Transporte</span><span class="value">Por módulo<sup>*</sup></span></li>
+          <li><span class="label">Tiempo de instalación</span><span class="value">A confirmar<sup>*</sup></span></li>
+          <li><span class="label">Equipo necesario</span><span class="value">A confirmar<sup>*</sup></span></li>
+          <li><span class="label">Obra civil previa</span><span class="value">Platea de hormigón</span></li>
+          <li><span class="label">Conexiones</span><span class="value">Agua, cloaca, electricidad</span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Escalabilidad para proyecto habitacional</div>
+        <ul class="info-list">
+          <li><span class="label">Capacidad de producción</span><span class="value">A confirmar<sup>*</sup></span></li>
+          <li><span class="label">Configuración en serie</span><span class="value">Replicable y modular</span></li>
+          <li><span class="label">Posibilidad de ampliación</span><span class="value">Sí (módulos adicionales)</span></li>
+          <li><span class="label">Adaptación distribución</span><span class="value">A pedido</span></li>
+        </ul>
+      </div>
+      <div class="info-section">
+        <div class="info-section-title">Lo que incluye</div>
+        <ul class="info-list">
+          <li><span class="label">Estructura completa</span><span class="value">Sí</span></li>
+          <li><span class="label">Aberturas y vidrios</span><span class="value">Sí</span></li>
+          <li><span class="label">Sanitario completo</span><span class="value">Sí</span></li>
+          <li><span class="label">Cocina con bacha</span><span class="value">Sí</span></li>
+          <li><span class="label">Pisos y terminaciones</span><span class="value">Sí</span></li>
+          <li><span class="label">Calefacción y luminarias</span><span class="value">No incluido</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="piece-note">
+    <strong>*</strong> Datos a confirmar con fabricante. Información sujeta a especificación final del proveedor para configurar oferta definitiva al gobierno de Tierra del Fuego.
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="item"><strong>P. 07</strong></div>
+      <div class="item">Ficha técnica · Pieza 05</div>
+      <div class="item">Emisión 05·2026</div>
+    </div>
+    <div class="footer-right">Falhaus</div>
+  </div>
+</div>
+
+<!-- ============== PIEZA 06 — Renders en contexto ============== -->
+<div class="page">
+  <div class="header">
+    <div class="header-brand">
+      <img src="assets/logo-iso.png" class="iso" alt="">
+      <span class="wordmark">Falhaus</span>
+    </div>
+    <div class="header-meta">
+      Pieza 06 / 06 — Visualización<br>
+      <strong>Vivienda modular 36 m²</strong>
+    </div>
+  </div>
+  <div class="piece-title">
+    <div class="piece-number">06 — Visualización en contexto</div>
+    <h2 class="piece-name">La unidad instalada en Tierra del Fuego</h2>
+    <p class="piece-subtitle">Visualización referencial de la unidad y proyección a escala habitacional</p>
+  </div>
+  <div class="body" style="grid-template-columns: 1fr; gap: 6mm; padding-bottom: 18mm;">
+    <div>
+      <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: var(--falhaus-blue); margin-bottom: 6px;">Unidad instalada · Vista referencial</div>
+      <div class="image-block" style="min-height: 80mm; padding: 0; overflow: hidden;">
+        <img src="assets/render-frontal-tdf.jpg" alt="Render unidad en Tierra del Fuego" style="width: 100%; height: auto; max-height: none; display: block;">
+      </div>
+    </div>
+    <div>
+      <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: var(--falhaus-blue); margin-bottom: 6px;">Desarrollo habitacional a escala · Vista aérea</div>
+      <div class="image-block" style="min-height: 60mm; padding: 0; overflow: hidden;">
+        <img src="assets/render-aereo-desarrollo.jpg" alt="Render aéreo desarrollo habitacional" style="width: 100%; height: auto; max-height: none; display: block;">
+      </div>
+    </div>
+  </div>
+  <div class="piece-note">
+    Visualización referencial generada con apoyo de inteligencia artificial sobre la base del producto real. Ambientada en paisaje característico de Tierra del Fuego (Río Grande / Tolhuin). Las unidades, dimensiones y disposición son representativas y se ajustan según el proyecto final.
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="item"><strong>P. 08</strong></div>
+      <div class="item">Visualización en contexto · Pieza 06</div>
+      <div class="item">Emisión 05·2026</div>
+    </div>
+    <div class="footer-right">Falhaus</div>
+  </div>
+</div>
+
+<!-- ============== CONTRAPORTADA / CONTACTO ============== -->
+<div class="page cover" style="background: white; color: var(--text-primary);">
+  <div class="cover-top">
+    <img src="assets/logo-iso.png" class="cover-iso" style="filter: none;" alt="">
+    <div class="cover-meta" style="color: var(--text-secondary); opacity: 1;">
+      Mayo 2026<br>
+      Contacto
+    </div>
+  </div>
+  <div class="cover-center">
+    <div class="cover-eyebrow" style="color: var(--falhaus-blue); opacity: 1;">Próximos pasos</div>
+    <h1 class="cover-title" style="color: var(--falhaus-blue);">Conversemos sobre<br>el proyecto.</h1>
+    <p class="cover-subtitle" style="color: var(--text-secondary); opacity: 1;">
+      Estamos disponibles para profundizar especificaciones técnicas, evaluar adaptaciones específicas al territorio fueguino, dimensionar lotes de producción y coordinar visita a obra.
+    </p>
+    <div style="margin-top: 30mm; display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; max-width: 480px;">
+      <div>
+        <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--falhaus-blue); font-weight: 600; margin-bottom: 6px;">Falhaus</div>
+        <div style="font-size: 13px; color: var(--text-primary); line-height: 1.6;">
+          falhaus.com<br>
+          Buenos Aires, Argentina
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--falhaus-blue); font-weight: 600; margin-bottom: 6px;">Contacto</div>
+        <div style="font-size: 13px; color: var(--text-primary); line-height: 1.6;">
+          Federico Lami<br>
+          Dirección comercial
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-tagline" style="color: var(--falhaus-blue);">Lo tuyo merece lugar.</div>
+    <div class="cover-recipient" style="color: var(--text-secondary); opacity: 1;">
+      Documento confidencial<br>
+      <strong style="color: var(--falhaus-blue); font-size:13px;letter-spacing:0.5px;">© Falhaus 2026</strong>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
